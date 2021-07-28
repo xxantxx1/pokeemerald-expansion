@@ -1,6 +1,7 @@
 @ NOTE: Route 104's sail to Dewford script references local IDs from Dewford's map. 
 @  These are labeled in DewfordTown/scripts.inc
-.set LOCALID_RIVAL, 34
+.set LOCALID_RIVAL, 35
+.set LOCALID_VIOLA, 34
 
 Route104_MapScripts:: @ 81ECC32
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route104_OnFrame
@@ -1190,3 +1191,104 @@ Route104_Text_BrendanPostBattle: @ 81EE120
 	.string "making POKéMON battle.\p"
 	.string "Like MR. BRINEY, it's important to\n"
 	.string "become friends with your POKéMON.$"
+
+Route104_EventScript_ViolaLeft:: 
+	lockall
+	applymovement  LOCALID_VIOLA, Route104_Movement_ViolaLeft
+	waitmovement 0
+	msgbox BattleViola_Text, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_no_intro TRAINER_VIOLA, Route104_Viola_text
+	applymovement   LOCALID_VIOLA, Route104_Viola_Movement_Backoff
+	waitmovement 0
+    msgbox Rout1104_Viola_Leave, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_VIOLA, Route104_Movement_ViolaRun
+	waitmovement 0
+	removeobject LOCALID_VIOLA
+	setvar VAR_ROUTE104_STATE, 1
+	releaseall
+	end
+	
+Route104_EventScript_ViolaRight:: 
+	lockall
+	applymovement  LOCALID_VIOLA, Route104_Movement_ViolaRight
+	waitmovement 0
+	msgbox BattleViola_Text, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_no_intro TRAINER_VIOLA, Route104_Viola_text
+	applymovement   LOCALID_VIOLA, Route104_Viola_Movement_Backoff
+	waitmovement 0
+    msgbox Rout1104_Viola_Leave, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_VIOLA, Route104_Movement_ViolaRun
+	waitmovement 0
+	removeobject LOCALID_VIOLA
+	setvar VAR_ROUTE104_STATE, 1
+	releaseall
+	end
+	
+Route104_Movement_ViolaLeft:
+	delay_16
+	face_player
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+	
+Route104_Movement_ViolaRight:
+	delay_16
+	face_player
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+	
+BattleViola_Text:
+	.string "A Beautiful Bridge Overlooking Rustboro\n"
+	.string "A Trainer and their POKéMON.\p"
+	.string "Sorry, I should Introduce Myself,\n"
+	.string "My name is Viola and I am a gym leader \p"
+    .string "in the Kalos Reigon.\p"
+    .string "The POKéMON League shut down the Kalos \n"
+	.string "League for being too easy and to go to \p"
+	.string "Hoenn.\p"
+	.string "I am traveling around to capture Trainers \n"
+	.string "and their POKéMON to Understand  \p"
+	.string "The true nature of a Gym Challenge. \n"
+	.string "May we have a battle?$"
+
+
+Route104_Viola_Movement_Backoff:
+	lock_facing_direction
+	walk_up
+	unlock_facing_direction
+	step_end
+	
+Route104_Movement_ViolaRun:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	delay_16
+	delay_16
+	step_end
+
+Route104_Viola_text: 
+	.string "What a great Battle!$"
+	
+Rout1104_Viola_Leave: 
+	.string "You have taught me what a true\n"
+	.string "battle is about!\p"
+	.string "I will take this fighting spirit \n"
+	.string "to Kalos for when I get back \p"
+	.string "Thankyou and goodluck in Hoenn!$"

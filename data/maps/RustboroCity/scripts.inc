@@ -884,6 +884,7 @@ RustboroCity_EventScript_MayAskToBattle:: @ 81E1070
 
 RustboroCity_EventScript_BattleMay:: @ 81E1092
 	msgbox RustboroCity_Text_MayImNotGoingToLose, MSGBOX_DEFAULT
+	giveitem ITEM_ABILITY_CAPSULE
 	switch VAR_STARTER_MON
 	case 0, RustboroCity_EventScript_BattleMayTreecko
 	case 1, RustboroCity_EventScript_BattleMayTorchic
@@ -953,6 +954,7 @@ RustboroCity_EventScript_BrendanAskToBattle:: @ 81E1174
 
 RustboroCity_EventScript_BattleBrendan:: @ 81E1191
 	msgbox RustboroCity_Text_BrendanIWontGoEasy, MSGBOX_DEFAULT
+	giveitem ITEM_ABILITY_CAPSULE
 	switch VAR_STARTER_MON
 	case 0, RustboroCity_EventScript_BattleBrendanTreecko
 	case 1, RustboroCity_EventScript_BattleBrendanTorchic
@@ -1191,7 +1193,8 @@ RustboroCity_Text_MayWantToBattle: @ 81E1C48
 
 RustboroCity_Text_MayImNotGoingToLose: @ 81E1C84
 	.string "MAY: You just became a TRAINER,\n"
-	.string "{PLAYER}{KUN}. I'm not going to lose!$"
+	.string "{PLAYER}{KUN}. I'm not going to lose! \p"
+	.string "You may need this Item. $"
 
 RustboroCity_Text_MayDefeat: @ 81E1CC1
 	.string "Yikes!\n"
@@ -1237,7 +1240,9 @@ RustboroCity_Text_BrendanWantToBattle: @ 81E1F76
 
 RustboroCity_Text_BrendanIWontGoEasy: @ 81E1FA9
 	.string "BRENDAN: I know you just became\n"
-	.string "a TRAINER, but I won't go easy!$"
+	.string "a TRAINER, but I won't go easy!\p"
+	.string "Here take this Item before we begin.$ "
+	
 
 RustboroCity_Text_BrendanDefeat: @ 81E1FE9
 	.string "Hmm…\n"

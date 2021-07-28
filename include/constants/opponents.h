@@ -135,8 +135,8 @@
 #define TRAINER_TIFFANY                     131
 #define TRAINER_JESSICA_2                   132
 #define TRAINER_JESSICA_3                   133
-#define TRAINER_JESSICA_4                   134
-#define TRAINER_JESSICA_5                   135
+#define TRAINER_GRANT                       134
+#define TRAINER_VIOLA                       135
 #define TRAINER_WINSTON_1                   136
 #define TRAINER_MOLLIE                      137
 #define TRAINER_GARRET                      138
@@ -795,7 +795,7 @@
 #define TRAINER_WINONA_3                    791
 #define TRAINER_WINONA_4                    792
 #define TRAINER_WINONA_5                    793
-#define TRAINER_TATE_AND_LIZA_2             794
+#define TRAINER_PAULY                       794
 #define TRAINER_TATE_AND_LIZA_3             795
 #define TRAINER_TATE_AND_LIZA_4             796
 #define TRAINER_TATE_AND_LIZA_5             797

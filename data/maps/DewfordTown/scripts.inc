@@ -810,3 +810,27 @@ DewfordTown_Text_YeahDefinitionOfInRightNow: @ 81EA491
 	.string "Yeah, absolutely right!\p"
 	.string "“{STR_VAR_1}” is the\n"
 	.string "definition of “in” right now.$"
+	
+DewfordTown_EventScript_Letter::
+lockall
+goto_if_unset FLAG_DELIVERED_STEVEN_LETTER, DewfordTown_walkback
+releaseall
+end
+
+DewfordTown_walkback::
+msgbox DewfordTown_Text_Letter, MSGBOX_DEFAULT
+applymovement OBJ_EVENT_ID_PLAYER, DewfordTown_walkback_movement
+waitmovement 0
+releaseall
+end
+
+DewfordTown_Text_Letter: 
+	.string "I should deliever that letter.$"
+
+DewfordTown_walkback_movement:
+delay_16
+walk_down
+delay_16
+step_end
+	
+	

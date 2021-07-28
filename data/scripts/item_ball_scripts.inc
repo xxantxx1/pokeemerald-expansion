@@ -1,5 +1,9 @@
 Route102_EventScript_ItemPotion:: @ 8290CD8
-	finditem ITEM_POTION
+	finditem ITEM_BERRY_JUICE
+	end
+	
+Route102_EventScript_Itemjuice::
+	finditem ITEM_BERRY_JUICE
 	end
 
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
@@ -19,11 +23,11 @@ Route104_EventScript_ItemPokeBall:: @ 8290D0C
 	end
 
 Route104_EventScript_ItemXAccuracy:: @ 8290D19
-	finditem ITEM_X_ACCURACY
+	finditem ITEM_BERRY_JUICE
 	end
 
 Route104_EventScript_ItemPotion:: @ 8290D26
-	finditem ITEM_POTION
+	finditem ITEM_CHARCOAL
 	end
 
 Route105_EventScript_ItemIron:: @ 8290D33
@@ -127,23 +131,23 @@ Route115_EventScript_ItemPPUp:: @ 8290E6B
 	end
 
 Route116_EventScript_ItemXSpecial:: @ 8290E78
-	finditem ITEM_X_SP_ATK
+	finditem ITEM_HARD_STONE
 	end
 
 Route116_EventScript_ItemEther:: @ 8290E85
-	finditem ITEM_ETHER
+	finditem ITEM_BERRY_JUICE
 	end
 
 Route116_EventScript_ItemRepel:: @ 8290E92
-	finditem ITEM_REPEL
+	finditem ITEM_BERRY_JUICE
 	end
 
 Route116_EventScript_ItemHPUp:: @ 8290E9F
-	finditem ITEM_HP_UP
+	finditem ITEM_MUSCLE_BAND
 	end
 
 Route116_EventScript_ItemPotion:: @ 8290EAC
-	finditem ITEM_POTION
+	finditem ITEM_WISE_GLASSES
 	end
 
 Route117_EventScript_ItemGreatBall:: @ 8290EB9
@@ -327,19 +331,19 @@ MossdeepCity_EventScript_ItemNetBall:: @ 82910F5
 	end
 
 PetalburgWoods_EventScript_ItemXAttack:: @ 8291102
-	finditem ITEM_X_ATTACK
+	finditem ITEM_BERRY_JUICE
 	end
 
 PetalburgWoods_EventScript_ItemGreatBall:: @ 829110F
-	finditem ITEM_GREAT_BALL
+	finditem ITEM_BERRY_JUICE
 	end
 
 PetalburgWoods_EventScript_ItemEther:: @ 829111C
-	finditem ITEM_ETHER
+	finditem ITEM_BERRY_JUICE
 	end
 
 PetalburgWoods_EventScript_ItemParalyzeHeal:: @ 8291129
-	finditem ITEM_PARALYZE_HEAL
+	finditem ITEM_BERRY_JUICE
 	end
 
 RusturfTunnel_EventScript_ItemPokeBall:: @ 8291136

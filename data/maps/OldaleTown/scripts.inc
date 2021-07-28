@@ -75,7 +75,7 @@ OldaleTown_EventScript_GoToMartEast:: @ 81E8F75
 
 OldaleTown_EventScript_ExplainPokemonMart:: @ 81E8F8C
 	msgbox OldaleTown_Text_ThisIsAPokemonMart, MSGBOX_DEFAULT
-	giveitem ITEM_POTION
+	giveitem ITEM_ORAN_BERRY
 	compare VAR_RESULT, FALSE
 	goto_if_eq OldaleTown_EventScript_BagIsFull
 	msgbox OldaleTown_Text_PotionExplanation, MSGBOX_DEFAULT
@@ -367,7 +367,7 @@ OldaleTown_Text_ThisIsAPokemonMart: @ 81E91FD
 	.string "a promotional item.$"
 
 OldaleTown_Text_PotionExplanation: @ 81E92AF
-	.string "A POTION can be used anytime, so it's\n"
+	.string "An ORAN BERRY can be used anytime, so it's\n"
 	.string "even more useful than a POKéMON CENTER\l"
 	.string "in certain situations.$"
 

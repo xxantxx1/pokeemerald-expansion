@@ -1,0 +1,1604 @@
+asm/macros/battle_script.inc[36m:[m	various \battler, VARIOUS_GET_[1;31mMOVE_[mTARGET
+asm/macros/battle_script.inc[36m:[m	various \battler, VARIOUS_UPDATE_CHOICE_[1;31mMOVE_[mON_LVL_UP
+asm/macros/battle_script.inc[36m:[m	various \battler, VARIOUS_PLAY_[1;31mMOVE_[mANIMATION
+asm/macros/battle_script.inc[36m:[m	various BS_ATTACKER, VARIOUS_ARGUMENT_TO_[1;31mMOVE_[mEFFECT
+asm/macros/battle_script.inc[36m:[m	sethword s[1;31mMOVE_[mEFFECT \effect
+asm/macros/battle_script.inc[36m:[m	sethword sSAVED_[1;31mMOVE_[mEFFECT \effect
+asm/macros/battle_script.inc[36m:[m	jumpifbyte CMP_COMMON_BITS, gMoveResultFlags, [1;31mMOVE_[mRESULT_NO_EFFECT, \jumpptr
+berry_fix/charmap.txt[36m:[mMUS_[1;31mMOVE_[mDELETED = 7A 01
+berry_fix/payload/charmap.txt[36m:[mMUS_[1;31mMOVE_[mDELETED = 7A 01
+charmap.txt[36m:[mMUS_[1;31mMOVE_[mDELETED = 7A 01
+data/battle_anim_scripts.s[36m:[m	.2byte [1;31mMOVE_[mSING, [1;31mMOVE_[mPERISH_SONG, [1;31mMOVE_[mGRASS_WHISTLE, 0xFFFF
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_DEF_MINUS_1 | [1;31mMOVE_[mEFFECT_AFFECTS_USER | [1;31mMOVE_[mEFFECT_CERTAIN
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_SLEEP
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_BUG_BITE | [1;31mMOVE_[mEFFECT_CERTAIN
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_INCINERATE | [1;31mMOVE_[mEFFECT_CERTAIN
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_CORE_ENFORCER | [1;31mMOVE_[mEFFECT_CERTAIN
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_V_CREATE | [1;31mMOVE_[mEFFECT_AFFECTS_USER
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_NOT_PROTECT_AFFECTED | [1;31mMOVE_[mEFFECT_CERTAIN, BattleScript_VCreateTrySpDef
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_NOT_PROTECT_AFFECTED | [1;31mMOVE_[mEFFECT_CERTAIN, BattleScript_VCreateTrySpeed
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_NOT_PROTECT_AFFECTED | [1;31mMOVE_[mEFFECT_CERTAIN, BattleScript_VCreateStatLossRet
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_SPECTRAL_THIEF
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_SP_ATK_PLUS_1 | [1;31mMOVE_[mEFFECT_AFFECTS_USER
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_CERTAIN, BattleScript_MoveEnd
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_FEINT
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_DEF_PLUS_2 | [1;31mMOVE_[mEFFECT_AFFECTS_USER
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_FLAME_BURST | [1;31mMOVE_[mEFFECT_AFFECTS_USER
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_SMACK_DOWN
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_AutotomizeWeightLoss
+data/battle_scripts_1.s[36m:[m	bichalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_SUPER_EFFECTIVE | [1;31mMOVE_[mRESULT_NOT_VERY_EFFECTIVE
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_CLEAR_SMOG
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_POISON
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_ShellSmashTrySpDef
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_ShellSmashTryAttack
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_ShellSmashTrySpAtk
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_ShellSmashTrySpeed
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_ShellSmashEnd
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_GrowthTrySpAtk
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_GrowthEnd
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_ShiftGearTryAtk
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_ShiftGearEnd
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_CoilTryDef
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_CoilTryAcc
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_CoilEnd
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_QuiverDanceTrySpDef
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_QuiverDanceTrySpeed
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_QuiverDanceEnd
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_SPD_PLUS_1 | [1;31mMOVE_[mEFFECT_AFFECTS_USER
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_AttackSpAttackUpTrySpAtk
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_AttackSpAttackUpEnd
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_AttackAccUpTrySpDef
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_AttackAccUpEnd
+data/battle_scripts_1.s[36m:[m	bichalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_NOT_VERY_EFFECTIVE | [1;31mMOVE_[mRESULT_SUPER_EFFECTIVE
+data/battle_scripts_1.s[36m:[m	jumpifnotchosenmove [1;31mMOVE_[mLUNAR_DANCE BattleScript_EffectHealingWishNewMon
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_THROAT_CHOP | [1;31mMOVE_[mEFFECT_CERTAIN
+data/battle_scripts_1.s[36m:[m	orhalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_MISSED
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_SLEEP
+data/battle_scripts_1.s[36m:[m	orhalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_FAILED
+data/battle_scripts_1.s[36m:[m	orhalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_FAILED
+data/battle_scripts_1.s[36m:[m	orhalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_FAILED
+data/battle_scripts_1.s[36m:[m	orhalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_FAILED
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_POISON
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_BURN
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_FREEZE
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_PARALYSIS
+data/battle_scripts_1.s[36m:[m	jumpifbyte CMP_NO_COMMON_BITS, gMoveResultFlags, [1;31mMOVE_[mRESULT_MISSED, BattleScript_ExplosionDoAnimStartLoop
+data/battle_scripts_1.s[36m:[m	jumpifbyte CMP_NO_COMMON_BITS, gMoveResultFlags, [1;31mMOVE_[mRESULT_MISSED, BattleScript_ExplosionDoAnimStartLoop
+data/battle_scripts_1.s[36m:[m	bichalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_MISSED
+data/battle_scripts_1.s[36m:[m	orhalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_MISSED
+data/battle_scripts_1.s[36m:[m	orhalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_FAILED
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_StatUpEnd
+data/battle_scripts_1.s[36m:[m	jumpifhalfword CMP_EQUAL, gChosenMove, [1;31mMOVE_[mSLEEP_TALK, BattleScript_DoMultiHit
+data/battle_scripts_1.s[36m:[m	copyhword s[1;31mMOVE_[mEFFECT, sMULTIHIT_EFFECT
+data/battle_scripts_1.s[36m:[m	jumpifbyte CMP_COMMON_BITS, gMoveResultFlags, [1;31mMOVE_[mRESULT_FOE_ENDURED, BattleScript_MultiHitPrintStrings
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_FLINCH
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_FLINCH
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_TOXIC
+data/battle_scripts_1.s[36m:[m	setbyte cMULTISTRING_CHOOSER, B_MSG_ABILITY_PREVENTS_[1;31mMOVE_[mSTATUS
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_PAYDAY
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_TRI_ATTACK
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_CHARGING
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_CHARGING | [1;31mMOVE_[mEFFECT_AFFECTS_USER
+data/battle_scripts_1.s[36m:[m	bichalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_SUPER_EFFECTIVE | [1;31mMOVE_[mRESULT_NOT_VERY_EFFECTIVE
+data/battle_scripts_1.s[36m:[m	bichalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_SUPER_EFFECTIVE | [1;31mMOVE_[mRESULT_NOT_VERY_EFFECTIVE
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_WRAP
+data/battle_scripts_1.s[36m:[m	jumpifbyte CMP_COMMON_BITS, gMoveResultFlags, [1;31mMOVE_[mRESULT_DOESNT_AFFECT_FOE, BattleScript_MoveMissedDoDamage
+data/battle_scripts_1.s[36m:[m	jumpifbyte CMP_COMMON_BITS, gMoveResultFlags, [1;31mMOVE_[mRESULT_DOESNT_AFFECT_FOE, BattleScript_MoveEnd
+data/battle_scripts_1.s[36m:[m	bichalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_MISSED | [1;31mMOVE_[mRESULT_DOESNT_AFFECT_FOE
+data/battle_scripts_1.s[36m:[m	bichalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_MISSED
+data/battle_scripts_1.s[36m:[m	orhalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_MISSED | [1;31mMOVE_[mRESULT_DOESNT_AFFECT_FOE
+data/battle_scripts_1.s[36m:[m	orhalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_MISSED
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_CONFUSION
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_POISON
+data/battle_scripts_1.s[36m:[m	bichalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_SUPER_EFFECTIVE | [1;31mMOVE_[mRESULT_NOT_VERY_EFFECTIVE
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_PARALYSIS
+data/battle_scripts_1.s[36m:[m	setbyte cMULTISTRING_CHOOSER, B_MSG_ABILITY_PREVENTS_[1;31mMOVE_[mSTATUS
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_ATK_MINUS_1
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_DEF_MINUS_1
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_SPD_MINUS_1
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_SP_ATK_MINUS_1
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_SP_DEF_MINUS_1
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_SP_DEF_MINUS_2
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_ACC_MINUS_1
+data/battle_scripts_1.s[36m:[m	jumpifmove [1;31mMOVE_[mSKY_ATTACK, BattleScript_EffectTwoTurnsAttackSkyAttack
+data/battle_scripts_1.s[36m:[m	jumpifmove [1;31mMOVE_[mRAZOR_WIND, BattleScript_EffectTwoTurnsAttackRazorWind
+data/battle_scripts_1.s[36m:[m	jumpifmove [1;31mMOVE_[mICE_BURN, BattleScript_EffectTwoTurnsAttackIceBurn
+data/battle_scripts_1.s[36m:[m	jumpifmove [1;31mMOVE_[mFREEZE_SHOCK, BattleScript_EffectTwoTurnsAttackFreezeShock
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_CHARGING
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_GeomancyTrySpDef
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_GeomancyTrySpeed
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_GeomancyEnd
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_CONFUSION
+data/battle_scripts_1.s[36m:[m	sethword sMULTIHIT_EFFECT, [1;31mMOVE_[mEFFECT_POISON
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_RECHARGE | [1;31mMOVE_[mEFFECT_AFFECTS_USER | [1;31mMOVE_[mEFFECT_CERTAIN
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_RAGE
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_RAGE
+data/battle_scripts_1.s[36m:[m	jumpifmove [1;31mMOVE_[mHOLD_HANDS, BattleScript_EffectHoldHands
+data/battle_scripts_1.s[36m:[m	jumpifmove [1;31mMOVE_[mCELEBRATE, BattleScript_EffectCelebrate
+data/battle_scripts_1.s[36m:[m	jumpifmove [1;31mMOVE_[mHAPPY_HOUR, BattleScript_EffectHappyHour
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_HAPPY_HOUR
+data/battle_scripts_1.s[36m:[m	bichalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_SUPER_EFFECTIVE | [1;31mMOVE_[mRESULT_NOT_VERY_EFFECTIVE
+data/battle_scripts_1.s[36m:[m	bichalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_SUPER_EFFECTIVE | [1;31mMOVE_[mRESULT_NOT_VERY_EFFECTIVE
+data/battle_scripts_1.s[36m:[m	bichalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_NOT_VERY_EFFECTIVE | [1;31mMOVE_[mRESULT_SUPER_EFFECTIVE
+data/battle_scripts_1.s[36m:[m	jumpifhalfword CMP_EQUAL, gChosenMove, [1;31mMOVE_[mSLEEP_TALK, BattleScript_DoSnore
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_FLINCH
+data/battle_scripts_1.s[36m:[m	jumpifnotmove [1;31mMOVE_[mHEAL_BELL, BattleScript_PartyHealEnd
+data/battle_scripts_1.s[36m:[m	jumpifhalfword CMP_EQUAL, gChosenMove, [1;31mMOVE_[mSLEEP_TALK, BattleScript_DoTripleKickAttack
+data/battle_scripts_1.s[36m:[m	jumpifbyte CMP_COMMON_BITS, gMoveResultFlags, [1;31mMOVE_[mRESULT_FOE_ENDURED, BattleScript_TripleKickPrintStrings
+data/battle_scripts_1.s[36m:[m	bichalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_MISSED
+data/battle_scripts_1.s[36m:[m	jumpifbyte CMP_COMMON_BITS, gMoveResultFlags, [1;31mMOVE_[mRESULT_DOESNT_AFFECT_FOE, BattleScript_TripleKickEnd
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_STEAL_ITEM
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_PREVENT_ESCAPE
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_PREVENT_ESCAPE
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_NIGHTMARE
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_CurseTryAttack
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_CurseTryDefense
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_CurseEnd
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_CONFUSION
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_BURN
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_RAPIDSPIN | [1;31mMOVE_[mEFFECT_AFFECTS_USER | [1;31mMOVE_[mEFFECT_CERTAIN
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_EffectRapidSpinEnd
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_RAPIDSPIN | [1;31mMOVE_[mEFFECT_AFFECTS_USER | [1;31mMOVE_[mEFFECT_CERTAIN
+data/battle_scripts_1.s[36m:[m	bichalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_SUPER_EFFECTIVE | [1;31mMOVE_[mRESULT_NOT_VERY_EFFECTIVE
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_DEF_PLUS_1 | [1;31mMOVE_[mEFFECT_AFFECTS_USER
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_ATK_PLUS_1 | [1;31mMOVE_[mEFFECT_AFFECTS_USER
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_ALL_STATS_UP | [1;31mMOVE_[mEFFECT_AFFECTS_USER
+data/battle_scripts_1.s[36m:[m	bichalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_NOT_VERY_EFFECTIVE | [1;31mMOVE_[mRESULT_SUPER_EFFECTIVE
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_SkullBashEnd
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_FLINCH
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_SPD_MINUS_1
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_CHARGING | [1;31mMOVE_[mEFFECT_AFFECTS_USER
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_PARALYSIS
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_CONFUSION
+data/battle_scripts_1.s[36m:[m	jumpifmove [1;31mMOVE_[mFLY, BattleScript_FirstTurnFly
+data/battle_scripts_1.s[36m:[m	jumpifmove [1;31mMOVE_[mDIVE, BattleScript_FirstTurnDive
+data/battle_scripts_1.s[36m:[m	jumpifmove [1;31mMOVE_[mBOUNCE, BattleScript_FirstTurnBounce
+data/battle_scripts_1.s[36m:[m	jumpifmove [1;31mMOVE_[mPHANTOM_FORCE, BattleScript_FirstTurnPhantomForce
+data/battle_scripts_1.s[36m:[m	jumpifmove [1;31mMOVE_[mSHADOW_FORCE, BattleScript_FirstTurnPhantomForce
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_CHARGING
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_DefenseCurlDoStatUpAnim
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_FLINCH
+data/battle_scripts_1.s[36m:[m	orhalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_FAILED
+data/battle_scripts_1.s[36m:[m	orhalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_DOESNT_AFFECT_FOE
+data/battle_scripts_1.s[36m:[m	orhalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_DOESNT_AFFECT_FOE
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_UPROAR | [1;31mMOVE_[mEFFECT_AFFECTS_USER
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_EffectStockpileSpDef
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_EffectStockpileEnd
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_CONFUSION
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_BURN
+data/battle_scripts_1.s[36m:[m	setbyte cMULTISTRING_CHOOSER, B_MSG_ABILITY_PREVENTS_[1;31mMOVE_[mSTATUS
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_RE[1;31mMOVE_[mSTATUS | [1;31mMOVE_[mEFFECT_CERTAIN
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_EffectChargeString
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_ATK_DEF_DOWN | [1;31mMOVE_[mEFFECT_AFFECTS_USER | [1;31mMOVE_[mEFFECT_CERTAIN
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_DEF_SPDEF_DOWN | [1;31mMOVE_[mEFFECT_AFFECTS_USER | [1;31mMOVE_[mEFFECT_CERTAIN
+data/battle_scripts_1.s[36m:[m	bichalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_MISSED | [1;31mMOVE_[mRESULT_DOESNT_AFFECT_FOE
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_KNOCK_OFF
+data/battle_scripts_1.s[36m:[m	bichalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_SUPER_EFFECTIVE | [1;31mMOVE_[mRESULT_NOT_VERY_EFFECTIVE
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_RECOIL_25 | [1;31mMOVE_[mEFFECT_AFFECTS_USER | [1;31mMOVE_[mEFFECT_CERTAIN
+data/battle_scripts_1.s[36m:[m	jumpifnotmove [1;31mMOVE_[mSTRUGGLE, BattleScript_EffectHit
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_RECOIL_33 | [1;31mMOVE_[mEFFECT_AFFECTS_USER | [1;31mMOVE_[mEFFECT_CERTAIN
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_RECOIL_33_STATUS | [1;31mMOVE_[mEFFECT_AFFECTS_USER | [1;31mMOVE_[mEFFECT_CERTAIN
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_RECOIL_50 | [1;31mMOVE_[mEFFECT_AFFECTS_USER | [1;31mMOVE_[mEFFECT_CERTAIN
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_CONFUSION
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_TOXIC
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_SP_ATK_TWO_DOWN | [1;31mMOVE_[mEFFECT_AFFECTS_USER | [1;31mMOVE_[mEFFECT_CERTAIN
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_SPD_MINUS_1 | [1;31mMOVE_[mEFFECT_AFFECTS_USER | [1;31mMOVE_[mEFFECT_CERTAIN
+data/battle_scripts_1.s[36m:[m	orhalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_FAILED
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_CosmicPowerTrySpDef
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_CosmicPowerEnd
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_BulkUpTryDef
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_BulkUpEnd
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_CalmMindTrySpDef
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_CalmMindEnd
+data/battle_scripts_1.s[36m:[m	orhalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_FAILED
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_DragonDanceTrySpeed
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_DragonDanceEnd
+data/battle_scripts_1.s[36m:[m	setbyte sLEARN[1;31mMOVE_[mSTATE, 0
+data/battle_scripts_1.s[36m:[m	setbyte sLEARN[1;31mMOVE_[mSTATE, 0
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_CHARGING
+data/battle_scripts_1.s[36m:[m	bichalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_SUPER_EFFECTIVE | [1;31mMOVE_[mRESULT_NOT_VERY_EFFECTIVE
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_CHARGING
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_AllStatsUpDef
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_AllStatsUpSpeed
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_AllStatsUpSpAtk
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_AllStatsUpSpDef
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_AllStatsUpRet
+data/battle_scripts_1.s[36m:[m	accuracycheck BattleScript_FutureAttackMiss, [1;31mMOVE_[mFUTURE_SIGHT
+data/battle_scripts_1.s[36m:[m	accuracycheck BattleScript_FutureAttackMiss, [1;31mMOVE_[mDOOM_DESIRE
+data/battle_scripts_1.s[36m:[m	sethword gMoveResultFlags, [1;31mMOVE_[mRESULT_FAILED
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | [1;31mMOVE_[mEFFECT_CERTAIN | STAT_BUFF_ALLOW_PTR, BattleScript_AtkDefDownTryDef
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | [1;31mMOVE_[mEFFECT_CERTAIN | STAT_BUFF_ALLOW_PTR, BattleScript_AtkDefDownRet
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | [1;31mMOVE_[mEFFECT_CERTAIN | STAT_BUFF_ALLOW_PTR, BattleScript_DefSpDefDownTrySpDef
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | [1;31mMOVE_[mEFFECT_CERTAIN | STAT_BUFF_ALLOW_PTR, BattleScript_DefSpDefDownRet
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | [1;31mMOVE_[mEFFECT_CERTAIN | STAT_BUFF_ALLOW_PTR, BattleScript_SAtkDown2End
+data/battle_scripts_1.s[36m:[m	sethword gMoveResultFlags, [1;31mMOVE_[mRESULT_FAILED
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_MoveUsedFlinchedEnd
+data/battle_scripts_1.s[36m:[m	jumpifmove [1;31mMOVE_[mSTRUGGLE, BattleScript_DoRecoil
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | [1;31mMOVE_[mEFFECT_CERTAIN | STAT_BUFF_NOT_PROTECT_AFFECTED, BattleScript_MoodyLower
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | [1;31mMOVE_[mEFFECT_CERTAIN | STAT_BUFF_NOT_PROTECT_AFFECTED, BattleScript_MoodyEnd
+data/battle_scripts_1.s[36m:[m	statbuffchange STAT_BUFF_NOT_PROTECT_AFFECTED | [1;31mMOVE_[mEFFECT_CERTAIN | STAT_BUFF_ALLOW_PTR, BattleScript_TryAdrenalineOrbRet
+data/battle_scripts_1.s[36m:[m	orhalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_DOESNT_AFFECT_FOE
+data/battle_scripts_1.s[36m:[m	orhalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_DOESNT_AFFECT_FOE
+data/battle_scripts_1.s[36m:[m	statbuffchange STAT_BUFF_NOT_PROTECT_AFFECTED | [1;31mMOVE_[mEFFECT_CERTAIN, NULL
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_NOT_PROTECT_AFFECTED | [1;31mMOVE_[mEFFECT_CERTAIN, NULL
+data/battle_scripts_1.s[36m:[m	statbuffchange STAT_BUFF_NOT_PROTECT_AFFECTED | [1;31mMOVE_[mEFFECT_CERTAIN, NULL
+data/battle_scripts_1.s[36m:[m	statbuffchange STAT_BUFF_NOT_PROTECT_AFFECTED | [1;31mMOVE_[mEFFECT_CERTAIN, NULL
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_FellStingerRaisesAtkEnd
+data/battle_scripts_1.s[36m:[m	playmoveanimation BS_ATTACKER, [1;31mMOVE_[mTRANSFORM
+data/battle_scripts_1.s[36m:[m	bichalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_NO_EFFECT
+data/battle_scripts_1.s[36m:[m	bichalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_NO_EFFECT
+data/battle_scripts_1.s[36m:[m	bichalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_NO_EFFECT
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_SLEEP | [1;31mMOVE_[mEFFECT_AFFECTS_USER
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_CONFUSION | [1;31mMOVE_[mEFFECT_AFFECTS_USER
+data/battle_scripts_1.s[36m:[m	setmoveeffect [1;31mMOVE_[mEFFECT_CONFUSION | [1;31mMOVE_[mEFFECT_AFFECTS_USER
+data/battle_scripts_1.s[36m:[m	statbuffchange [1;31mMOVE_[mEFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_BerryStatRaiseDoStatUp
+data/battle_scripts_2.s[36m:[m	bichalfword gMoveResultFlags, [1;31mMOVE_[mRESULT_NO_EFFECT
+data/field_effect_scripts.s[36m:[m	.4byte gFieldEffectScript_FieldMoveShowMon          @ FLDEFF_FIELD_[1;31mMOVE_[mSHOW_MON
+data/field_effect_scripts.s[36m:[m	.4byte gFieldEffectScript_FieldMoveShowMonInit      @ FLDEFF_FIELD_[1;31mMOVE_[mSHOW_MON_INIT
+data/field_effect_scripts.s[36m:[m	.4byte gFieldEffectScript_MoveDeoxysRock            @ FLDEFF_[1;31mMOVE_[mDEOXYS_ROCK
+data/maps/BattleFrontier_Lounge7/scripts.inc[36m:[m	setvar VAR_TEMP_C, SCROLL_MULTI_BF_[1;31mMOVE_[mTUTOR_1
+data/maps/BattleFrontier_Lounge7/scripts.inc[36m:[m	goto_if_set FLAG_MET_FRONTIER_BEAUTY_[1;31mMOVE_[mTUTOR, BattleFrontier_Lounge7_EventScript_AlreadyMetLeftTutor
+data/maps/BattleFrontier_Lounge7/scripts.inc[36m:[m	setflag FLAG_MET_FRONTIER_BEAUTY_[1;31mMOVE_[mTUTOR
+data/maps/BattleFrontier_Lounge7/scripts.inc[36m:[m	setvar VAR_0x8004, SCROLL_MULTI_BF_[1;31mMOVE_[mTUTOR_1
+data/maps/BattleFrontier_Lounge7/scripts.inc[36m:[m	setvar VAR_0x8004, SCROLL_MULTI_BF_[1;31mMOVE_[mTUTOR_1
+data/maps/BattleFrontier_Lounge7/scripts.inc[36m:[m	setvar VAR_TEMP_C, SCROLL_MULTI_BF_[1;31mMOVE_[mTUTOR_2
+data/maps/BattleFrontier_Lounge7/scripts.inc[36m:[m	goto_if_set FLAG_MET_FRONTIER_SWIMMER_[1;31mMOVE_[mTUTOR, BattleFrontier_Lounge7_EventScript_AlreadyMetRightTutor
+data/maps/BattleFrontier_Lounge7/scripts.inc[36m:[m	setflag FLAG_MET_FRONTIER_SWIMMER_[1;31mMOVE_[mTUTOR
+data/maps/BattleFrontier_Lounge7/scripts.inc[36m:[m	setvar VAR_0x8004, SCROLL_MULTI_BF_[1;31mMOVE_[mTUTOR_2
+data/maps/BattleFrontier_Lounge7/scripts.inc[36m:[m	setvar VAR_0x8004, SCROLL_MULTI_BF_[1;31mMOVE_[mTUTOR_2
+data/maps/FallarborTown/map.json[36m:[m      "dest_map": "MAP_FALLARBOR_TOWN_[1;31mMOVE_[mRELEARNERS_HOUSE",
+data/maps/FallarborTown_MoveRelearnersHouse/map.json[36m:[m  "id": "MAP_FALLARBOR_TOWN_[1;31mMOVE_[mRELEARNERS_HOUSE",
+data/maps/FallarborTown_MoveRelearnersHouse/scripts.inc[36m:[m.set LOCALID_[1;31mMOVE_[mRELEARNER, 1
+data/maps/FallarborTown_MoveRelearnersHouse/scripts.inc[36m:[m	applymovement LOCALID_[1;31mMOVE_[mRELEARNER, Common_Movement_FacePlayer
+data/maps/LilycoveCity/map.json[36m:[m      "dest_map": "MAP_LILYCOVE_CITY_[1;31mMOVE_[mDELETERS_HOUSE",
+data/maps/LilycoveCity_MoveDeletersHouse/map.json[36m:[m  "id": "MAP_LILYCOVE_CITY_[1;31mMOVE_[mDELETERS_HOUSE",
+data/maps/LilycoveCity_MoveDeletersHouse/scripts.inc[36m:[m.set LOCALID_[1;31mMOVE_[mDELETER, 1
+data/maps/LilycoveCity_MoveDeletersHouse/scripts.inc[36m:[m	applymovement LOCALID_[1;31mMOVE_[mDELETER, Common_Movement_FacePlayer
+data/maps/LilycoveCity_MoveDeletersHouse/scripts.inc[36m:[m	playfanfare MUS_[1;31mMOVE_[mDELETED
+data/scripts/field_move_scripts.inc[36m:[m	checkpartymove [1;31mMOVE_[mCUT
+data/scripts/field_move_scripts.inc[36m:[m	buffermovename 1, [1;31mMOVE_[mCUT
+data/scripts/field_move_scripts.inc[36m:[m	checkpartymove [1;31mMOVE_[mROCK_SMASH
+data/scripts/field_move_scripts.inc[36m:[m	buffermovename 1, [1;31mMOVE_[mROCK_SMASH
+data/scripts/field_move_scripts.inc[36m:[m	checkpartymove [1;31mMOVE_[mSTRENGTH
+data/scripts/field_move_scripts.inc[36m:[m	checkpartymove [1;31mMOVE_[mWATERFALL
+data/scripts/field_move_scripts.inc[36m:[m	checkpartymove [1;31mMOVE_[mDIVE
+data/scripts/field_move_scripts.inc[36m:[m	checkpartymove [1;31mMOVE_[mDIVE
+data/scripts/mevent_pichu.inc[36m:[m	setmonmove 1, 2, [1;31mMOVE_[mSURF
+data/scripts/mevent_pichu.inc[36m:[m	setmonmove 2, 2, [1;31mMOVE_[mSURF
+data/scripts/mevent_pichu.inc[36m:[m	setmonmove 3, 2, [1;31mMOVE_[mSURF
+data/scripts/mevent_pichu.inc[36m:[m	setmonmove 4, 2, [1;31mMOVE_[mSURF
+data/scripts/mevent_pichu.inc[36m:[m	setmonmove 5, 2, [1;31mMOVE_[mSURF
+data/scripts/move_tutors.inc[36m:[m	goto_if_set FLAG_[1;31mMOVE_[mTUTOR_TAUGHT_SWAGGER, MoveTutor_EventScript_SwaggerTaught
+data/scripts/move_tutors.inc[36m:[m	setvar VAR_0x8005, TUTOR_[1;31mMOVE_[mSWAGGER
+data/scripts/move_tutors.inc[36m:[m	setflag FLAG_[1;31mMOVE_[mTUTOR_TAUGHT_SWAGGER
+data/scripts/move_tutors.inc[36m:[m	goto_if_set FLAG_[1;31mMOVE_[mTUTOR_TAUGHT_ROLLOUT, MoveTutor_EventScript_RolloutTaught
+data/scripts/move_tutors.inc[36m:[m	setvar VAR_0x8005, TUTOR_[1;31mMOVE_[mROLLOUT
+data/scripts/move_tutors.inc[36m:[m	setflag FLAG_[1;31mMOVE_[mTUTOR_TAUGHT_ROLLOUT
+data/scripts/move_tutors.inc[36m:[m	goto_if_set FLAG_[1;31mMOVE_[mTUTOR_TAUGHT_FURY_CUTTER, MoveTutor_EventScript_FuryCutterTaught
+data/scripts/move_tutors.inc[36m:[m	setvar VAR_0x8005, TUTOR_[1;31mMOVE_[mFURY_CUTTER
+data/scripts/move_tutors.inc[36m:[m	setflag FLAG_[1;31mMOVE_[mTUTOR_TAUGHT_FURY_CUTTER
+data/scripts/move_tutors.inc[36m:[m	goto_if_set FLAG_[1;31mMOVE_[mTUTOR_TAUGHT_MIMIC, MoveTutor_EventScript_MimicTaught
+data/scripts/move_tutors.inc[36m:[m	setvar VAR_0x8005, TUTOR_[1;31mMOVE_[mMIMIC
+data/scripts/move_tutors.inc[36m:[m	setflag FLAG_[1;31mMOVE_[mTUTOR_TAUGHT_MIMIC
+data/scripts/move_tutors.inc[36m:[m	goto_if_set FLAG_[1;31mMOVE_[mTUTOR_TAUGHT_METRONOME, MoveTutor_EventScript_MetronomeTaught
+data/scripts/move_tutors.inc[36m:[m	setvar VAR_0x8005, TUTOR_[1;31mMOVE_[mMETRONOME
+data/scripts/move_tutors.inc[36m:[m	setflag FLAG_[1;31mMOVE_[mTUTOR_TAUGHT_METRONOME
+data/scripts/move_tutors.inc[36m:[m	goto_if_set FLAG_[1;31mMOVE_[mTUTOR_TAUGHT_SLEEP_TALK, MoveTutor_EventScript_SleepTalkTaught
+data/scripts/move_tutors.inc[36m:[m	setvar VAR_0x8005, TUTOR_[1;31mMOVE_[mSLEEP_TALK
+data/scripts/move_tutors.inc[36m:[m	setflag FLAG_[1;31mMOVE_[mTUTOR_TAUGHT_SLEEP_TALK
+data/scripts/move_tutors.inc[36m:[m	goto_if_set FLAG_[1;31mMOVE_[mTUTOR_TAUGHT_SUBSTITUTE, MoveTutor_EventScript_SubstituteTaught
+data/scripts/move_tutors.inc[36m:[m	setvar VAR_0x8005, TUTOR_[1;31mMOVE_[mSUBSTITUTE
+data/scripts/move_tutors.inc[36m:[m	setflag FLAG_[1;31mMOVE_[mTUTOR_TAUGHT_SUBSTITUTE
+data/scripts/move_tutors.inc[36m:[m	goto_if_set FLAG_[1;31mMOVE_[mTUTOR_TAUGHT_DYNAMICPUNCH, MoveTutor_EventScript_DynamicPunchTaught
+data/scripts/move_tutors.inc[36m:[m	setvar VAR_0x8005, TUTOR_[1;31mMOVE_[mDYNAMIC_PUNCH
+data/scripts/move_tutors.inc[36m:[m	setflag FLAG_[1;31mMOVE_[mTUTOR_TAUGHT_DYNAMICPUNCH
+data/scripts/move_tutors.inc[36m:[m	goto_if_set FLAG_[1;31mMOVE_[mTUTOR_TAUGHT_DOUBLE_EDGE, MoveTutor_EventScript_DoubleEdgeTaught
+data/scripts/move_tutors.inc[36m:[m	setvar VAR_0x8005, TUTOR_[1;31mMOVE_[mDOUBLE_EDGE
+data/scripts/move_tutors.inc[36m:[m	setflag FLAG_[1;31mMOVE_[mTUTOR_TAUGHT_DOUBLE_EDGE
+data/scripts/move_tutors.inc[36m:[m	goto_if_set FLAG_[1;31mMOVE_[mTUTOR_TAUGHT_EXPLOSION, MoveTutor_EventScript_ExplosionTaught
+data/scripts/move_tutors.inc[36m:[m	setvar VAR_0x8005, TUTOR_[1;31mMOVE_[mEXPLOSION
+data/scripts/move_tutors.inc[36m:[m	setflag FLAG_[1;31mMOVE_[mTUTOR_TAUGHT_EXPLOSION
+data/scripts/secret_base.inc[36m:[m	checkpartymove [1;31mMOVE_[mSECRET_POWER
+data/scripts/secret_base.inc[36m:[m	buffermovename 1, [1;31mMOVE_[mSECRET_POWER
+data/scripts/secret_base.inc[36m:[m	checkpartymove [1;31mMOVE_[mSECRET_POWER
+data/scripts/secret_base.inc[36m:[m	buffermovename 1, [1;31mMOVE_[mSECRET_POWER
+data/scripts/surf.inc[36m:[m	checkpartymove [1;31mMOVE_[mSURF
+gflib/window.c[36m:[m#define [1;31mMOVE_[mTILES_DOWN(a)                                                      \
+gflib/window.c[36m:[m#define [1;31mMOVE_[mTILES_UP(a)                                                        \
+gflib/window.c[36m:[m            [1;31mMOVE_[mTILES_DOWN(0)
+gflib/window.c[36m:[m            [1;31mMOVE_[mTILES_DOWN(4)
+gflib/window.c[36m:[m            [1;31mMOVE_[mTILES_DOWN(8)
+gflib/window.c[36m:[m            [1;31mMOVE_[mTILES_DOWN(12)
+gflib/window.c[36m:[m            [1;31mMOVE_[mTILES_DOWN(16)
+gflib/window.c[36m:[m            [1;31mMOVE_[mTILES_DOWN(20)
+gflib/window.c[36m:[m            [1;31mMOVE_[mTILES_DOWN(24)
+gflib/window.c[36m:[m            [1;31mMOVE_[mTILES_DOWN(28)
+gflib/window.c[36m:[m            [1;31mMOVE_[mTILES_UP(0)
+gflib/window.c[36m:[m            [1;31mMOVE_[mTILES_UP(4)
+gflib/window.c[36m:[m            [1;31mMOVE_[mTILES_UP(8)
+gflib/window.c[36m:[m            [1;31mMOVE_[mTILES_UP(12)
+gflib/window.c[36m:[m            [1;31mMOVE_[mTILES_UP(16)
+gflib/window.c[36m:[m            [1;31mMOVE_[mTILES_UP(20)
+gflib/window.c[36m:[m            [1;31mMOVE_[mTILES_UP(24)
+gflib/window.c[36m:[m            [1;31mMOVE_[mTILES_UP(28)
+include/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_BYTE        3
+include/battle.h[36m:[m#define AI_[1;31mMOVE_[mHISTORY_COUNT 3
+include/battle.h[36m:[m    u16 moveHistory[MAX_BATTLERS_COUNT][AI_[1;31mMOVE_[mHISTORY_COUNT]; // 3 last used moves for each battler
+include/battle.h[36m:[m#define GET_[1;31mMOVE_[mTYPE(move, typeArg)                        \
+include/battle.h[36m:[m#define IS_[1;31mMOVE_[mPHYSICAL(move)(GetBattleMoveSplit(move) == SPLIT_PHYSICAL)
+include/battle.h[36m:[m#define IS_[1;31mMOVE_[mSPECIAL(move)(GetBattleMoveSplit(move) == SPLIT_SPECIAL)
+include/battle.h[36m:[m#define IS_[1;31mMOVE_[mSTATUS(move)(gBattleMoves[move].split == SPLIT_STATUS)
+include/battle_controllers.h[36m:[m#define RESET_ACTION_[1;31mMOVE_[mSELECTION     0
+include/battle_controllers.h[36m:[m#define RESET_[1;31mMOVE_[mSELECTION            2
+include/battle_message.h[36m:[m#define PREPARE_[1;31mMOVE_[mBUFFER(textVar, move)                      \
+include/battle_util.h[36m:[m#define [1;31mMOVE_[mLIMITATION_ZEROMOVE                (1 << 0)
+include/battle_util.h[36m:[m#define [1;31mMOVE_[mLIMITATION_PP                      (1 << 1)
+include/battle_util.h[36m:[m#define [1;31mMOVE_[mLIMITATION_DISABLED                (1 << 2)
+include/battle_util.h[36m:[m#define [1;31mMOVE_[mLIMITATION_TORMENTED               (1 << 3)
+include/battle_util.h[36m:[m#define [1;31mMOVE_[mLIMITATION_TAUNT                   (1 << 4)
+include/battle_util.h[36m:[m#define [1;31mMOVE_[mLIMITATION_IMPRISON                (1 << 5)
+include/battle_util.h[36m:[m#define ABILITYEFFECT_[1;31mMOVE_[mEND_ATTACKER          0x4
+include/battle_util.h[36m:[m#define ABILITYEFFECT_[1;31mMOVE_[mEND                   0x5
+include/battle_util.h[36m:[m#define ABILITYEFFECT_[1;31mMOVE_[mEND_OTHER             0xE
+include/battle_util.h[36m:[m#define ITEMEFFECT_[1;31mMOVE_[mEND                     0x3
+include/constants/apprentice.h[36m:[m#define NUM_WHICH_[1;31mMOVE_[mQUESTIONS 5
+include/constants/apprentice.h[36m:[m#define MAX_APPRENTICE_QUESTIONS NUM_WHICH_MON_QUESTIONS + NUM_WHICH_[1;31mMOVE_[mQUESTIONS + 2
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mRESULT_MISSED             (1 << 0)
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mRESULT_SUPER_EFFECTIVE    (1 << 1)
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mRESULT_NOT_VERY_EFFECTIVE (1 << 2)
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mRESULT_DOESNT_AFFECT_FOE  (1 << 3)
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mRESULT_ONE_HIT_KO         (1 << 4)
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mRESULT_FAILED             (1 << 5)
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mRESULT_FOE_ENDURED        (1 << 6)
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mRESULT_FOE_HUNG_ON        (1 << 7)
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mRESULT_STURDIED           (1 << 8)
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mRESULT_NO_EFFECT          ([1;31mMOVE_[mRESULT_MISSED | [1;31mMOVE_[mRESULT_DOESNT_AFFECT_FOE | [1;31mMOVE_[mRESULT_FAILED)
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_SLEEP               0x1
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_POISON              0x2
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_BURN                0x3
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_FREEZE              0x4
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_PARALYSIS           0x5
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_TOXIC               0x6
+include/constants/battle.h[36m:[m#define PRIMARY_STATUS_[1;31mMOVE_[mEFFECT      [1;31mMOVE_[mEFFECT_TOXIC // All above move effects apply primary status
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_CONFUSION           0x7
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_FLINCH              0x8
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_TRI_ATTACK          0x9
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_UPROAR              0xA
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_PAYDAY              0xB
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_CHARGING            0xC
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_WRAP                0xD
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_RECOIL_25           0xE
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_ATK_PLUS_1          0xF
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_DEF_PLUS_1          0x10
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_SPD_PLUS_1          0x11
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_SP_ATK_PLUS_1       0x12
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_SP_DEF_PLUS_1       0x13
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_ACC_PLUS_1          0x14
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_EVS_PLUS_1          0x15
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_ATK_MINUS_1         0x16
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_DEF_MINUS_1         0x17
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_SPD_MINUS_1         0x18
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_SP_ATK_MINUS_1      0x19
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_SP_DEF_MINUS_1      0x1A
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_ACC_MINUS_1         0x1B
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_EVS_MINUS_1         0x1C
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_RECHARGE            0x1D
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_RAGE                0x1E
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_STEAL_ITEM          0x1F
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_PREVENT_ESCAPE      0x20
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_NIGHTMARE           0x21
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_ALL_STATS_UP        0x22
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_RAPIDSPIN           0x23
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_RE[1;31mMOVE_[mSTATUS       0x24
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_ATK_DEF_DOWN        0x25
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_RECOIL_33           0x26
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_ATK_PLUS_2          0x27
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_DEF_PLUS_2          0x28
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_SPD_PLUS_2          0x29
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_SP_ATK_PLUS_2       0x2A
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_SP_DEF_PLUS_2       0x2B
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_ACC_PLUS_2          0x2C
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_EVS_PLUS_2          0x2D
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_ATK_MINUS_2         0x2E
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_DEF_MINUS_2         0x2F
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_SPD_MINUS_2         0x30
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_SP_ATK_MINUS_2      0x31
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_SP_DEF_MINUS_2      0x32
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_ACC_MINUS_2         0x33
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_EVS_MINUS_2         0x34
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_THRASH              0x35
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_KNOCK_OFF           0x36
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_DEF_SPDEF_DOWN      0x37
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_RECOIL_33_STATUS    0x38
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_RECOIL_50           0x39
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_CLEAR_SMOG          0x3A
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_SP_ATK_TWO_DOWN     0x3B
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_SMACK_DOWN          0x3C
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_FLAME_BURST         0x3D
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_FEINT               0x3E
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_SPECTRAL_THIEF      0x3F
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_V_CREATE            0x40
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_HAPPY_HOUR          0x41
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_CORE_ENFORCER       0x42
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_THROAT_CHOP         0x43
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_INCINERATE          0x44
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_BUG_BITE            0x45
+include/constants/battle.h[36m:[m#define NUM_[1;31mMOVE_[mEFFECTS                0x46
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_AFFECTS_USER        0x4000
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mEFFECT_CERTAIN             0x8000
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mTARGET_SELECTED            0x0
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mTARGET_DEPENDS             0x1
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mTARGET_USER_OR_SELECTED    0x2
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mTARGET_RANDOM              0x4
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mTARGET_BOTH                0x8
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mTARGET_USER                0x10
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mTARGET_FOES_AND_ALLY       0x20
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mTARGET_OPPONENTS_FIELD     0x40
+include/constants/battle.h[36m:[m#define [1;31mMOVE_[mTARGET_ALLY                0x80
+include/constants/battle_ai.h[36m:[m#define [1;31mMOVE_[mPOWER_DISCOURAGED  0
+include/constants/battle_ai.h[36m:[m#define [1;31mMOVE_[mPOWER_BEST         1
+include/constants/battle_ai.h[36m:[m#define [1;31mMOVE_[mPOWER_GOOD         2 // Similar dmg range with best.
+include/constants/battle_ai.h[36m:[m#define [1;31mMOVE_[mPOWER_WEAK         3 // Significantly lower than best and good.
+include/constants/battle_anim.h[36m:[m#define ANIM_TAG_Z_[1;31mMOVE_[mSYMBOL              (ANIM_SPRITES_START + 359)
+include/constants/battle_anim.h[36m:[m#define BG_Z[1;31mMOVE_[mACTIVATE                       56
+include/constants/battle_anim.h[36m:[m#define BG_Z[1;31mMOVE_[mMOUNTAIN                       61
+include/constants/battle_config.h[36m:[m#define B_UPDATED_[1;31mMOVE_[mDATA         GEN_8 // Updates move data in gBattleMoves, including Power, Accuracy, PP, stat changes, targets, chances of secondary effects, etc.
+include/constants/battle_dome.h[36m:[m#define [1;31mMOVE_[mCARD_RIGHT     (1 << 1)
+include/constants/battle_dome.h[36m:[m#define [1;31mMOVE_[mCARD_DOWN      (1 << 2)
+include/constants/battle_dome.h[36m:[m#define [1;31mMOVE_[mCARD_LEFT      (1 << 3)
+include/constants/battle_dome.h[36m:[m#define [1;31mMOVE_[mCARD_UP        (1 << 4)
+include/constants/battle_dome.h[36m:[m#define [1;31mMOVE_[mCARD           ([1;31mMOVE_[mCARD_RIGHT | [1;31mMOVE_[mCARD_DOWN | [1;31mMOVE_[mCARD_LEFT | [1;31mMOVE_[mCARD_UP)
+include/constants/battle_dome.h[36m:[m#define [1;31mMOVE_[mPOINTS_COMBO      0   // Moves that work well in combination (e.g. Rain Dance + Hydro Pump)
+include/constants/battle_dome.h[36m:[m#define [1;31mMOVE_[mPOINTS_STAT_RAISE 1
+include/constants/battle_dome.h[36m:[m#define [1;31mMOVE_[mPOINTS_STAT_LOWER 2
+include/constants/battle_dome.h[36m:[m#define [1;31mMOVE_[mPOINTS_RARE       3   // Uncommon moves. Mostly arbitrary
+include/constants/battle_dome.h[36m:[m#define [1;31mMOVE_[mPOINTS_HEAL       4
+include/constants/battle_dome.h[36m:[m#define [1;31mMOVE_[mPOINTS_RISKY      5
+include/constants/battle_dome.h[36m:[m#define [1;31mMOVE_[mPOINTS_STATUS     6
+include/constants/battle_dome.h[36m:[m#define [1;31mMOVE_[mPOINTS_DMG        7
+include/constants/battle_dome.h[36m:[m#define [1;31mMOVE_[mPOINTS_DEF        8   // Defensive moves, like Amnesia, Light Screen, or accuracy-lowers
+include/constants/battle_dome.h[36m:[m#define [1;31mMOVE_[mPOINTS_ACCURATE   9
+include/constants/battle_dome.h[36m:[m#define [1;31mMOVE_[mPOINTS_POWERFUL   10  // Most of the moves that are >= 100 power
+include/constants/battle_dome.h[36m:[m#define [1;31mMOVE_[mPOINTS_POPULAR    11  // Group seems arbitrary. All using it are TM/HMs, but its only 11/58
+include/constants/battle_dome.h[36m:[m#define [1;31mMOVE_[mPOINTS_LUCK       12  
+include/constants/battle_dome.h[36m:[m#define [1;31mMOVE_[mPOINTS_STRONG     13  // Most of the moves that are >= 90 power
+include/constants/battle_dome.h[36m:[m#define [1;31mMOVE_[mPOINTS_LOW_PP     14
+include/constants/battle_dome.h[36m:[m#define [1;31mMOVE_[mPOINTS_EFFECT     15  // Moves with additional effects
+include/constants/battle_dome.h[36m:[m#define NUM_[1;31mMOVE_[mPOINT_TYPES   16
+include/constants/battle_move_effects.h[36m:[m#ifndef GUARD_CONSTANTS_BATTLE_[1;31mMOVE_[mEFFECTS_H
+include/constants/battle_move_effects.h[36m:[m#define GUARD_CONSTANTS_BATTLE_[1;31mMOVE_[mEFFECTS_H
+include/constants/battle_move_effects.h[36m:[m#define NUM_BATTLE_[1;31mMOVE_[mEFFECTS 350
+include/constants/battle_move_effects.h[36m:[m#endif  // GUARD_CONSTANTS_BATTLE_[1;31mMOVE_[mEFFECTS_H
+include/constants/battle_palace.h[36m:[m#define PALACE_[1;31mMOVE_[mGROUP_ATTACK  0
+include/constants/battle_palace.h[36m:[m#define PALACE_[1;31mMOVE_[mGROUP_DEFENSE 1
+include/constants/battle_palace.h[36m:[m#define PALACE_[1;31mMOVE_[mGROUP_SUPPORT 2
+include/constants/battle_script_commands.h[36m:[m#define sLEARN[1;31mMOVE_[mSTATE gBattleScripting + 0x1F
+include/constants/battle_script_commands.h[36m:[m#define sSAVED_[1;31mMOVE_[mEFFECT gBattleScripting + 0x2C
+include/constants/battle_script_commands.h[36m:[m#define s[1;31mMOVE_[mEFFECT gBattleScripting + 0x2E
+include/constants/battle_script_commands.h[36m:[m#define VARIOUS_GET_[1;31mMOVE_[mTARGET                 3
+include/constants/battle_script_commands.h[36m:[m#define VARIOUS_UPDATE_CHOICE_[1;31mMOVE_[mON_LVL_UP    6
+include/constants/battle_script_commands.h[36m:[m#define VARIOUS_SET_ALREADY_STATUS_[1;31mMOVE_[mATTEMPT 23
+include/constants/battle_script_commands.h[36m:[m#define VARIOUS_PLAY_[1;31mMOVE_[mANIMATION             36
+include/constants/battle_script_commands.h[36m:[m#define VARIOUS_ARGUMENT_TO_[1;31mMOVE_[mEFFECT         66
+include/constants/battle_script_commands.h[36m:[m#define MOVEEND_[1;31mMOVE_[mEFFECTS2                     14
+include/constants/battle_string_ids.h[36m:[m#define B_MSG_ABILITY_PREVENTS_[1;31mMOVE_[mSTATUS    0
+include/constants/easy_chat.h[36m:[m#define EC_GROUP_[1;31mMOVE_[m1           18
+include/constants/easy_chat.h[36m:[m#define EC_GROUP_[1;31mMOVE_[m2           19
+include/constants/easy_chat.h[36m:[m#define EC_MOVE(move) ((EC_GROUP_[1;31mMOVE_[m1 << 9) | [1;31mMOVE_[m##move)
+include/constants/easy_chat.h[36m:[m#define EC_MOVE2(move) ((EC_GROUP_[1;31mMOVE_[m2 << 9) | [1;31mMOVE_[m##move)
+include/constants/event_object_movement.h[36m:[m#define MOVEMENT_ACTION_ACRO_POP_WHEELIE_[1;31mMOVE_[mDOWN      0x80
+include/constants/event_object_movement.h[36m:[m#define MOVEMENT_ACTION_ACRO_POP_WHEELIE_[1;31mMOVE_[mUP        0x81
+include/constants/event_object_movement.h[36m:[m#define MOVEMENT_ACTION_ACRO_POP_WHEELIE_[1;31mMOVE_[mLEFT      0x82
+include/constants/event_object_movement.h[36m:[m#define MOVEMENT_ACTION_ACRO_POP_WHEELIE_[1;31mMOVE_[mRIGHT     0x83
+include/constants/event_object_movement.h[36m:[m#define MOVEMENT_ACTION_ACRO_WHEELIE_[1;31mMOVE_[mDOWN          0x84
+include/constants/event_object_movement.h[36m:[m#define MOVEMENT_ACTION_ACRO_WHEELIE_[1;31mMOVE_[mUP            0x85
+include/constants/event_object_movement.h[36m:[m#define MOVEMENT_ACTION_ACRO_WHEELIE_[1;31mMOVE_[mLEFT          0x86
+include/constants/event_object_movement.h[36m:[m#define MOVEMENT_ACTION_ACRO_WHEELIE_[1;31mMOVE_[mRIGHT         0x87
+include/constants/event_object_movement.h[36m:[m#define MOVEMENT_ACTION_ACRO_END_WHEELIE_[1;31mMOVE_[mDOWN      0x88
+include/constants/event_object_movement.h[36m:[m#define MOVEMENT_ACTION_ACRO_END_WHEELIE_[1;31mMOVE_[mUP        0x89
+include/constants/event_object_movement.h[36m:[m#define MOVEMENT_ACTION_ACRO_END_WHEELIE_[1;31mMOVE_[mLEFT      0x8A
+include/constants/event_object_movement.h[36m:[m#define MOVEMENT_ACTION_ACRO_END_WHEELIE_[1;31mMOVE_[mRIGHT     0x8B
+include/constants/field_effects.h[36m:[m#define FLDEFF_FIELD_[1;31mMOVE_[mSHOW_MON       6
+include/constants/field_effects.h[36m:[m#define FLDEFF_FIELD_[1;31mMOVE_[mSHOW_MON_INIT  59
+include/constants/field_effects.h[36m:[m#define FLDEFF_[1;31mMOVE_[mDEOXYS_ROCK          66
+include/constants/field_specials.h[36m:[m#define SCROLL_MULTI_BF_[1;31mMOVE_[mTUTOR_1                       9
+include/constants/field_specials.h[36m:[m#define SCROLL_MULTI_BF_[1;31mMOVE_[mTUTOR_2                      10
+include/constants/flags.h[36m:[m#define FLAG_MET_FRONTIER_BEAUTY_[1;31mMOVE_[mTUTOR  0x15A
+include/constants/flags.h[36m:[m#define FLAG_MET_FRONTIER_SWIMMER_[1;31mMOVE_[mTUTOR 0x15B
+include/constants/flags.h[36m:[m#define FLAG_[1;31mMOVE_[mTUTOR_TAUGHT_SWAGGER       0x1B1
+include/constants/flags.h[36m:[m#define FLAG_[1;31mMOVE_[mTUTOR_TAUGHT_ROLLOUT       0x1B2
+include/constants/flags.h[36m:[m#define FLAG_[1;31mMOVE_[mTUTOR_TAUGHT_FURY_CUTTER   0x1B3
+include/constants/flags.h[36m:[m#define FLAG_[1;31mMOVE_[mTUTOR_TAUGHT_MIMIC         0x1B4
+include/constants/flags.h[36m:[m#define FLAG_[1;31mMOVE_[mTUTOR_TAUGHT_METRONOME     0x1B5
+include/constants/flags.h[36m:[m#define FLAG_[1;31mMOVE_[mTUTOR_TAUGHT_SLEEP_TALK    0x1B6
+include/constants/flags.h[36m:[m#define FLAG_[1;31mMOVE_[mTUTOR_TAUGHT_SUBSTITUTE    0x1B7
+include/constants/flags.h[36m:[m#define FLAG_[1;31mMOVE_[mTUTOR_TAUGHT_DYNAMICPUNCH  0x1B8
+include/constants/flags.h[36m:[m#define FLAG_[1;31mMOVE_[mTUTOR_TAUGHT_DOUBLE_EDGE   0x1B9
+include/constants/flags.h[36m:[m#define FLAG_[1;31mMOVE_[mTUTOR_TAUGHT_EXPLOSION     0x1BA
+include/constants/global.h[36m:[m#define [1;31mMOVE_[mNAME_LENGTH 12
+include/constants/map_groups.h[36m:[m#define MAP_FALLARBOR_TOWN_[1;31mMOVE_[mRELEARNERS_HOUSE   (7 | (5 << 8))
+include/constants/map_groups.h[36m:[m#define MAP_LILYCOVE_CITY_[1;31mMOVE_[mDELETERS_HOUSE       (11 | (13 << 8))
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mNONE 0
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPOUND 1
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mKARATE_CHOP 2
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDOUBLE_SLAP 3
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCOMET_PUNCH 4
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMEGA_PUNCH 5
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPAY_DAY 6
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFIRE_PUNCH 7
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mICE_PUNCH 8
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTHUNDER_PUNCH 9
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSCRATCH 10
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mVISE_GRIP 11
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mGUILLOTINE 12
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mRAZOR_WIND 13
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSWORDS_DANCE 14
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCUT 15
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mGUST 16
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mWING_ATTACK 17
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mWHIRLWIND 18
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFLY 19
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBIND 20
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSLAM 21
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mVINE_WHIP 22
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSTOMP 23
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDOUBLE_KICK 24
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMEGA_KICK 25
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mJUMP_KICK 26
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mROLLING_KICK 27
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSAND_ATTACK 28
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHEADBUTT 29
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHORN_ATTACK 30
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFURY_ATTACK 31
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHORN_DRILL 32
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTACKLE 33
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBODY_SLAM 34
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mWRAP 35
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTAKE_DOWN 36
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTHRASH 37
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDOUBLE_EDGE 38
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTAIL_WHIP 39
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPOISON_STING 40
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTWINEEDLE 41
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPIN_MISSILE 42
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mLEER 43
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBITE 44
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mGROWL 45
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mROAR 46
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSING 47
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSUPERSONIC 48
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSONIC_BOOM 49
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDISABLE 50
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mACID 51
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mEMBER 52
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFLAMETHROWER 53
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMIST 54
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mWATER_GUN 55
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHYDRO_PUMP 56
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSURF 57
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mICE_BEAM 58
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBLIZZARD 59
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPSYBEAM 60
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBUBBLE_BEAM 61
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mAURORA_BEAM 62
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHYPER_BEAM 63
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPECK 64
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDRILL_PECK 65
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSUBMISSION 66
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mLOW_KICK 67
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCOUNTER 68
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSEISMIC_TOSS 69
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSTRENGTH 70
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mABSORB 71
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMEGA_DRAIN 72
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mLEECH_SEED 73
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mGROWTH 74
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mRAZOR_LEAF 75
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSOLAR_BEAM 76
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPOISON_POWDER 77
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSTUN_SPORE 78
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSLEEP_POWDER 79
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPETAL_DANCE 80
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSTRING_SHOT 81
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDRAGON_RAGE 82
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFIRE_SPIN 83
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTHUNDER_SHOCK 84
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTHUNDERBOLT 85
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTHUNDER_WAVE 86
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTHUNDER 87
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mROCK_THROW 88
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mEARTHQUAKE 89
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFISSURE 90
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDIG 91
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTOXIC 92
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCONFUSION 93
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPSYCHIC 94
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHYPNOSIS 95
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMEDITATE 96
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mAGILITY 97
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mQUICK_ATTACK 98
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mRAGE 99
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTELEPORT 100
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mNIGHT_SHADE 101
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMIMIC 102
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSCREECH 103
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDOUBLE_TEAM 104
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mRECOVER 105
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHARDEN 106
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMINIMIZE 107
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSMOKESCREEN 108
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCONFUSE_RAY 109
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mWITHDRAW 110
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDEFENSE_CURL 111
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBARRIER 112
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mLIGHT_SCREEN 113
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHAZE 114
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mREFLECT 115
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFOCUS_ENERGY 116
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBIDE 117
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMETRONOME 118
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMIRROR_MOVE 119
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSELF_DESTRUCT 120
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mEGG_BOMB 121
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mLICK 122
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSMOG 123
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSLUDGE 124
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBONE_CLUB 125
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFIRE_BLAST 126
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mWATERFALL 127
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCLAMP 128
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSWIFT 129
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSKULL_BASH 130
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSPIKE_CANNON 131
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCONSTRICT 132
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mAMNESIA 133
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mKINESIS 134
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSOFT_BOILED 135
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHIGH_JUMP_KICK 136
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mGLARE 137
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDREAM_EATER 138
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPOISON_GAS 139
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBARRAGE 140
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mLEECH_LIFE 141
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mLOVELY_KISS 142
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSKY_ATTACK 143
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTRANSFORM 144
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBUBBLE 145
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDIZZY_PUNCH 146
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSPORE 147
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFLASH 148
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPSYWAVE 149
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSPLASH 150
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mACID_ARMOR 151
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCRABHAMMER 152
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mEXPLOSION 153
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFURY_SWIPES 154
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBONEMERANG 155
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mREST 156
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mROCK_SLIDE 157
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHYPER_FANG 158
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSHARPEN 159
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCONVERSION 160
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTRI_ATTACK 161
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSUPER_FANG 162
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSLASH 163
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSUBSTITUTE 164
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSTRUGGLE 165
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSKETCH 166
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTRIPLE_KICK 167
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTHIEF 168
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSPIDER_WEB 169
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMIND_READER 170
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mNIGHTMARE 171
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFLAME_WHEEL 172
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSNORE 173
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCURSE 174
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFLAIL 175
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCONVERSION_2 176
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mAEROBLAST 177
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCOTTON_SPORE 178
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mREVERSAL 179
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSPITE 180
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPOWDER_SNOW 181
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPROTECT 182
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMACH_PUNCH 183
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSCARY_FACE 184
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFEINT_ATTACK 185
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSWEET_KISS 186
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBELLY_DRUM 187
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSLUDGE_BOMB 188
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMUD_SLAP 189
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mOCTAZOOKA 190
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSPIKES 191
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mZAP_CANNON 192
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFORESIGHT 193
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDESTINY_BOND 194
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPERISH_SONG 195
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mICY_WIND 196
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDETECT 197
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBONE_RUSH 198
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mLOCK_ON 199
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mOUTRAGE 200
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSANDSTORM 201
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mGIGA_DRAIN 202
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mENDURE 203
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCHARM 204
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mROLLOUT 205
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFALSE_SWIPE 206
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSWAGGER 207
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMILK_DRINK 208
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSPARK 209
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFURY_CUTTER 210
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSTEEL_WING 211
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMEAN_LOOK 212
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mATTRACT 213
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSLEEP_TALK 214
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHEAL_BELL 215
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mRETURN 216
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPRESENT 217
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFRUSTRATION 218
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSAFEGUARD 219
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPAIN_SPLIT 220
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSACRED_FIRE 221
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMAGNITUDE 222
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDYNAMIC_PUNCH 223
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMEGAHORN 224
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDRAGON_BREATH 225
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBATON_PASS 226
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mENCORE 227
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPURSUIT 228
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mRAPID_SPIN 229
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSWEET_SCENT 230
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mIRON_TAIL 231
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMETAL_CLAW 232
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mVITAL_THROW 233
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMORNING_SUN 234
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSYNTHESIS 235
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMOONLIGHT 236
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHIDDEN_POWER 237
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCROSS_CHOP 238
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTWISTER 239
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mRAIN_DANCE 240
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSUNNY_DAY 241
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCRUNCH 242
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMIRROR_COAT 243
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPSYCH_UP 244
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mEXTREME_SPEED 245
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mANCIENT_POWER 246
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSHADOW_BALL 247
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFUTURE_SIGHT 248
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mROCK_SMASH 249
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mWHIRLPOOL 250
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBEAT_UP 251
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFAKE_OUT 252
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mUPROAR 253
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSTOCKPILE 254
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSPIT_UP 255
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSWALLOW 256
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHEAT_WAVE 257
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHAIL 258
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTORMENT 259
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFLATTER 260
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mWILL_O_WISP 261
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMEMENTO 262
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFACADE 263
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFOCUS_PUNCH 264
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSMELLING_SALTS 265
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFOLLOW_ME 266
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mNATURE_POWER 267
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCHARGE 268
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTAUNT 269
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHELPING_HAND 270
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTRICK 271
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mROLE_PLAY 272
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mWISH 273
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mASSIST 274
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mINGRAIN 275
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSUPERPOWER 276
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMAGIC_COAT 277
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mRECYCLE 278
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mREVENGE 279
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBRICK_BREAK 280
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mYAWN 281
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mKNOCK_OFF 282
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mENDEAVOR 283
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mERUPTION 284
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSKILL_SWAP 285
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mIMPRISON 286
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mREFRESH 287
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mGRUDGE 288
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSNATCH 289
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSECRET_POWER 290
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDIVE 291
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mARM_THRUST 292
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCAMOUFLAGE 293
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTAIL_GLOW 294
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mLUSTER_PURGE 295
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMIST_BALL 296
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFEATHER_DANCE 297
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTEETER_DANCE 298
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBLAZE_KICK 299
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMUD_SPORT 300
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mICE_BALL 301
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mNEEDLE_ARM 302
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSLACK_OFF 303
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHYPER_VOICE 304
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPOISON_FANG 305
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCRUSH_CLAW 306
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBLAST_BURN 307
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHYDRO_CANNON 308
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMETEOR_MASH 309
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mASTONISH 310
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mWEATHER_BALL 311
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mAROMATHERAPY 312
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFAKE_TEARS 313
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mAIR_CUTTER 314
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mOVERHEAT 315
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mODOR_SLEUTH 316
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mROCK_TOMB 317
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSILVER_WIND 318
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMETAL_SOUND 319
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mGRASS_WHISTLE 320
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTICKLE 321
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCOSMIC_POWER 322
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mWATER_SPOUT 323
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSIGNAL_BEAM 324
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSHADOW_PUNCH 325
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mEXTRASENSORY 326
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSKY_UPPERCUT 327
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSAND_TOMB 328
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSHEER_COLD 329
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMUDDY_WATER 330
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBULLET_SEED 331
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mAERIAL_ACE 332
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mICICLE_SPEAR 333
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mIRON_DEFENSE 334
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBLOCK 335
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHOWL 336
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDRAGON_CLAW 337
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFRENZY_PLANT 338
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBULK_UP 339
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBOUNCE 340
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMUD_SHOT 341
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPOISON_TAIL 342
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCOVET 343
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mVOLT_TACKLE 344
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMAGICAL_LEAF 345
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mWATER_SPORT 346
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCALM_MIND 347
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mLEAF_BLADE 348
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDRAGON_DANCE 349
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mROCK_BLAST 350
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSHOCK_WAVE 351
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mWATER_PULSE 352
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDOOM_DESIRE 353
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPSYCHO_BOOST 354
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mROOST 355
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mGRAVITY 356
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMIRACLE_EYE 357
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mWAKE_UP_SLAP 358
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHAMMER_ARM 359
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mGYRO_BALL 360
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHEALING_WISH 361
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBRINE 362
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mNATURAL_GIFT 363
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFEINT 364
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPLUCK 365
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTAILWIND 366
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mACUPRESSURE 367
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMETAL_BURST 368
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mU_TURN 369
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCLOSE_COMBAT 370
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPAYBACK 371
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mASSURANCE 372
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mEMBARGO 373
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFLING 374
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPSYCHO_SHIFT 375
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTRUMP_CARD 376
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHEAL_BLOCK 377
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mWRING_OUT 378
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPOWER_TRICK 379
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mGASTRO_ACID 380
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mLUCKY_CHANT 381
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mME_FIRST 382
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCOPYCAT 383
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPOWER_SWAP 384
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mGUARD_SWAP 385
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPUNISHMENT 386
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mLAST_RESORT 387
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mWORRY_SEED 388
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSUCKER_PUNCH 389
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTOXIC_SPIKES 390
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHEART_SWAP 391
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mAQUA_RING 392
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMAGNET_RISE 393
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFLARE_BLITZ 394
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFORCE_PALM 395
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mAURA_SPHERE 396
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mROCK_POLISH 397
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPOISON_JAB 398
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDARK_PULSE 399
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mNIGHT_SLASH 400
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mAQUA_TAIL 401
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSEED_BOMB 402
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mAIR_SLASH 403
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mX_SCISSOR 404
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBUG_BUZZ 405
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDRAGON_PULSE 406
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDRAGON_RUSH 407
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPOWER_GEM 408
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDRAIN_PUNCH 409
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mVACUUM_WAVE 410
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFOCUS_BLAST 411
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mENERGY_BALL 412
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBRAVE_BIRD 413
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mEARTH_POWER 414
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSWITCHEROO 415
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mGIGA_IMPACT 416
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mNASTY_PLOT 417
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBULLET_PUNCH 418
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mAVALANCHE 419
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mICE_SHARD 420
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSHADOW_CLAW 421
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTHUNDER_FANG 422
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mICE_FANG 423
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFIRE_FANG 424
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSHADOW_SNEAK 425
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMUD_BOMB 426
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPSYCHO_CUT 427
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mZEN_HEADBUTT 428
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMIRROR_SHOT 429
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFLASH_CANNON 430
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mROCK_CLIMB 431
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDEFOG 432
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTRICK_ROOM 433
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDRACO_METEOR 434
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDISCHARGE 435
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mLAVA_PLUME 436
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mLEAF_STORM 437
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPOWER_WHIP 438
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mROCK_WRECKER 439
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCROSS_POISON 440
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mGUNK_SHOT 441
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mIRON_HEAD 442
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMAGNET_BOMB 443
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSTONE_EDGE 444
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCAPTIVATE 445
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSTEALTH_ROCK 446
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mGRASS_KNOT 447
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCHATTER 448
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mJUDGMENT 449
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBUG_BITE 450
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCHARGE_BEAM 451
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mWOOD_HAMMER 452
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mAQUA_JET 453
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mATTACK_ORDER 454
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDEFEND_ORDER 455
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHEAL_ORDER 456
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHEAD_SMASH 457
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDOUBLE_HIT 458
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mROAR_OF_TIME 459
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSPACIAL_REND 460
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mLUNAR_DANCE 461
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCRUSH_GRIP 462
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMAGMA_STORM 463
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDARK_VOID 464
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSEED_FLARE 465
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mOMINOUS_WIND 466
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSHADOW_FORCE 467
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHONE_CLAWS 468
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mWIDE_GUARD 469
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mGUARD_SPLIT 470
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPOWER_SPLIT 471
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mWONDER_ROOM 472
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPSYSHOCK 473
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mVENOSHOCK 474
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mAUTOTOMIZE 475
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mRAGE_POWDER 476
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTELEKINESIS 477
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMAGIC_ROOM 478
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSMACK_DOWN 479
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSTORM_THROW 480
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFLAME_BURST 481
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSLUDGE_WAVE 482
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mQUIVER_DANCE 483
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHEAVY_SLAM 484
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSYNCHRONOISE 485
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mELECTRO_BALL 486
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSOAK 487
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFLAME_CHARGE 488
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCOIL 489
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mLOW_SWEEP 490
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mACID_SPRAY 491
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFOUL_PLAY 492
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSIMPLE_BEAM 493
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mENTRAINMENT 494
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mAFTER_YOU 495
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mROUND 496
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mECHOED_VOICE 497
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCHIP_AWAY 498
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCLEAR_SMOG 499
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSTORED_POWER 500
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mQUICK_GUARD 501
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mALLY_SWITCH 502
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSCALD 503
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSHELL_SMASH 504
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHEAL_PULSE 505
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHEX 506
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSKY_DROP 507
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSHIFT_GEAR 508
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCIRCLE_THROW 509
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mINCINERATE 510
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mQUASH 511
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mACROBATICS 512
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mREFLECT_TYPE 513
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mRETALIATE 514
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFINAL_GAMBIT 515
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBESTOW 516
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mINFERNO 517
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mWATER_PLEDGE 518
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFIRE_PLEDGE 519
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mGRASS_PLEDGE 520
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mVOLT_SWITCH 521
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSTRUGGLE_BUG 522
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBULLDOZE 523
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFROST_BREATH 524
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDRAGON_TAIL 525
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mWORK_UP 526
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mELECTROWEB 527
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mWILD_CHARGE 528
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDRILL_RUN 529
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDUAL_CHOP 530
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHEART_STAMP 531
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHORN_LEECH 532
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSACRED_SWORD 533
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mRAZOR_SHELL 534
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHEAT_CRASH 535
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mLEAF_TORNADO 536
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSTEAMROLLER 537
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCOTTON_GUARD 538
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mNIGHT_DAZE 539
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPSYSTRIKE 540
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTAIL_SLAP 541
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHURRICANE 542
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHEAD_CHARGE 543
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mGEAR_GRIND 544
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSEARING_SHOT 545
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTECHNO_BLAST 546
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mRELIC_SONG 547
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSECRET_SWORD 548
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mGLACIATE 549
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBOLT_STRIKE 550
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBLUE_FLARE 551
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFIERY_DANCE 552
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFREEZE_SHOCK 553
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mICE_BURN 554
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSNARL 555
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mICICLE_CRASH 556
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mV_CREATE 557
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFUSION_FLARE 558
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFUSION_BOLT 559
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFLYING_PRESS 560
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMAT_BLOCK 561
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBELCH 562
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mROTOTILLER 563
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSTICKY_WEB 564
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFELL_STINGER 565
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPHANTOM_FORCE 566
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTRICK_OR_TREAT 567
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mNOBLE_ROAR 568
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mION_DELUGE 569
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPARABOLIC_CHARGE 570
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFORESTS_CURSE 571
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPETAL_BLIZZARD 572
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFREEZE_DRY 573
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDISARMING_VOICE 574
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPARTING_SHOT 575
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTOPSY_TURVY 576
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDRAINING_KISS 577
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCRAFTY_SHIELD 578
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFLOWER_SHIELD 579
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mGRASSY_TERRAIN 580
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMISTY_TERRAIN 581
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mELECTRIFY 582
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPLAY_ROUGH 583
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFAIRY_WIND 584
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMOONBLAST 585
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBOOMBURST 586
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFAIRY_LOCK 587
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mKINGS_SHIELD 588
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPLAY_NICE 589
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCONFIDE 590
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDIAMOND_STORM 591
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSTEAM_ERUPTION 592
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHYPERSPACE_HOLE 593
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mWATER_SHURIKEN 594
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMYSTICAL_FIRE 595
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSPIKY_SHIELD 596
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mAROMATIC_MIST 597
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mEERIE_IMPULSE 598
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mVENOM_DRENCH 599
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPOWDER 600
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mGEOMANCY 601
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMAGNETIC_FLUX 602
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHAPPY_HOUR 603
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mELECTRIC_TERRAIN 604
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDAZZLING_GLEAM 605
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCELEBRATE 606
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHOLD_HANDS 607
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBABY_DOLL_EYES 608
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mNUZZLE 609
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHOLD_BACK 610
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mINFESTATION 611
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPOWER_UP_PUNCH 612
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mOBLIVION_WING 613
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTHOUSAND_ARROWS 614
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTHOUSAND_WAVES 615
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mLANDS_WRATH 616
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mLIGHT_OF_RUIN 617
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mORIGIN_PULSE 618
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPRECIPICE_BLADES 619
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDRAGON_ASCENT 620
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHYPERSPACE_FURY 621
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSHORE_UP 622
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFIRST_IMPRESSION 623
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBANEFUL_BUNKER 624
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSPIRIT_SHACKLE 625
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDARKEST_LARIAT 626
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSPARKLING_ARIA 627
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mICE_HAMMER 628
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFLORAL_HEALING 629
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mHIGH_HORSEPOWER 630
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSTRENGTH_SAP 631
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSOLAR_BLADE 632
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mLEAFAGE 633
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSPOTLIGHT 634
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTOXIC_THREAD 635
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mLASER_FOCUS 636
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mGEAR_UP 637
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTHROAT_CHOP 638
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPOLLEN_PUFF 639
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mANCHOR_SHOT 640
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPSYCHIC_TERRAIN 641
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mLUNGE 642
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFIRE_LASH 643
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPOWER_TRIP 644
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBURN_UP 645
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSPEED_SWAP 646
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSMART_STRIKE 647
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPURIFY 648
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mREVELATION_DANCE 649
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCORE_ENFORCER 650
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTROP_KICK 651
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mINSTRUCT 652
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBEAK_BLAST 653
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCLANGING_SCALES 654
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDRAGON_HAMMER 655
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBRUTAL_SWING 656
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mAURORA_VEIL 657
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSHELL_TRAP 658
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFLEUR_CANNON 659
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPSYCHIC_FANGS 660
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSTOMPING_TANTRUM 661
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSHADOW_BONE 662
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mACCELEROCK 663
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mLIQUIDATION 664
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPRISMATIC_LASER 665
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSPECTRAL_THIEF 666
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSUNSTEEL_STRIKE 667
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMOONGEIST_BEAM 668
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTEARFUL_LOOK 669
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mZING_ZAP 670
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mNATURES_MADNESS 671
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMULTI_ATTACK 672
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMIND_BLOWN 673
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPLASMA_FISTS 674
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPHOTON_GEYSER 675
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mZIPPY_ZAP 676
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSPLISHY_SPLASH 677
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFLOATY_FALL 678
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPIKA_PAPOW 679
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBOUNCY_BUBBLE 680
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBUZZY_BUZZ 681
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSIZZLY_SLIDE 682
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mGLITZY_GLOW 683
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBADDY_BAD 684
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSAPPY_SEED 685
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFREEZY_FROST 686
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSPARKLY_SWIRL 687
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mVEEVEE_VOLLEY 688
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDOUBLE_IRON_BASH 689
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDYNAMAX_CANNON 690
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSNIPE_SHOT 691
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mJAW_LOCK 692
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSTUFF_CHEEKS 693
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mNO_RETREAT 694
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTAR_SHOT 695
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMAGIC_POWDER 696
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDRAGON_DARTS 697
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTEATIME 698
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mOCTOLOCK 699
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBOLT_BEAK 700
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFISHIOUS_REND 701
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCOURT_CHANGE 702
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCLANGOROUS_SOUL 703
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBODY_PRESS 704
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDECORATE 705
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDRUM_BEATING 706
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSNAP_TRAP 707
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPYRO_BALL 708
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBEHEMOTH_BLADE 709
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBEHEMOTH_BASH 710
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mAURA_WHEEL 711
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBREAKING_SWIPE 712
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBRANCH_POKE 713
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mOVERDRIVE 714
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mAPPLE_ACID 715
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mGRAV_APPLE 716
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSPIRIT_BREAK 717
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSTRANGE_STEAM 718
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mLIFE_DEW 719
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mOBSTRUCT 720
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFALSE_SURRENDER 721
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMETEOR_ASSAULT 722
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mETERNABEAM 723
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSTEEL_BEAM 724
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mEXPANDING_FORCE 725
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSTEEL_ROLLER 726
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSCALE_SHOT 727
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMETEOR_BEAM 728
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSHELL_SIDE_ARM 729
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mMISTY_EXPLOSION 730
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mGRASSY_GLIDE 731
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mRISING_VOLTAGE 732
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTERRAIN_PULSE 733
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSKITTER_SMACK 734
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mBURNING_JEALOUSY 735
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mLASH_OUT 736
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mPOLTERGEIST 737
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCORROSIVE_GAS 738
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mCOACHING 739
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFLIP_TURN 740
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTRIPLE_AXEL 741
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDUAL_WINGBEAT 742
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSCORCHING_SANDS 743
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mJUNGLE_HEALING 744
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mWICKED_BLOW 745
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mSURGING_STRIKES 746
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTHUNDER_CAGE 747
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mDRAGON_ENERGY 748
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFREEZING_GLARE 749
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mFIERY_WRATH 750
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mTHUNDEROUS_KICK 751
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mGLACIAL_LANCE 752
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mASTRAL_BARRAGE 753
+include/constants/moves.h[36m:[m#define [1;31mMOVE_[mEERIE_SPELL 754
+include/constants/party_menu.h[36m:[m#define TUTOR_[1;31mMOVE_[mMEGA_PUNCH      0
+include/constants/party_menu.h[36m:[m#define TUTOR_[1;31mMOVE_[mSWORDS_DANCE    1
+include/constants/party_menu.h[36m:[m#define TUTOR_[1;31mMOVE_[mMEGA_KICK       2
+include/constants/party_menu.h[36m:[m#define TUTOR_[1;31mMOVE_[mBODY_SLAM       3
+include/constants/party_menu.h[36m:[m#define TUTOR_[1;31mMOVE_[mDOUBLE_EDGE     4
+include/constants/party_menu.h[36m:[m#define TUTOR_[1;31mMOVE_[mCOUNTER         5
+include/constants/party_menu.h[36m:[m#define TUTOR_[1;31mMOVE_[mSEISMIC_TOSS    6
+include/constants/party_menu.h[36m:[m#define TUTOR_[1;31mMOVE_[mMIMIC           7
+include/constants/party_menu.h[36m:[m#define TUTOR_[1;31mMOVE_[mMETRONOME       8
+include/constants/party_menu.h[36m:[m#define TUTOR_[1;31mMOVE_[mSOFT_BOILED     9
+include/constants/party_menu.h[36m:[m#define TUTOR_[1;31mMOVE_[mDREAM_EATER     10
+include/constants/party_menu.h[36m:[m#define TUTOR_[1;31mMOVE_[mTHUNDER_WAVE    11
+include/constants/party_menu.h[36m:[m#define TUTOR_[1;31mMOVE_[mEXPLOSION       12
+include/constants/party_menu.h[36m:[m#define TUTOR_[1;31mMOVE_[mROCK_SLIDE      13
+include/constants/party_menu.h[36m:[m#define TUTOR_[1;31mMOVE_[mSUBSTITUTE      14
+include/constants/party_menu.h[36m:[m#define TUTOR_[1;31mMOVE_[mDYNAMIC_PUNCH   15
+include/constants/party_menu.h[36m:[m#define TUTOR_[1;31mMOVE_[mROLLOUT         16
+include/constants/party_menu.h[36m:[m#define TUTOR_[1;31mMOVE_[mPSYCH_UP        17
+include/constants/party_menu.h[36m:[m#define TUTOR_[1;31mMOVE_[mSNORE           18
+include/constants/party_menu.h[36m:[m#define TUTOR_[1;31mMOVE_[mICY_WIND        19
+include/constants/party_menu.h[36m:[m#define TUTOR_[1;31mMOVE_[mENDURE          20
+include/constants/party_menu.h[36m:[m#define TUTOR_[1;31mMOVE_[mMUD_SLAP        21
+include/constants/party_menu.h[36m:[m#define TUTOR_[1;31mMOVE_[mICE_PUNCH       22
+include/constants/party_menu.h[36m:[m#define TUTOR_[1;31mMOVE_[mSWAGGER         23
+include/constants/party_menu.h[36m:[m#define TUTOR_[1;31mMOVE_[mSLEEP_TALK      24
+include/constants/party_menu.h[36m:[m#define TUTOR_[1;31mMOVE_[mSWIFT           25
+include/constants/party_menu.h[36m:[m#define TUTOR_[1;31mMOVE_[mDEFENSE_CURL    26
+include/constants/party_menu.h[36m:[m#define TUTOR_[1;31mMOVE_[mTHUNDER_PUNCH   27
+include/constants/party_menu.h[36m:[m#define TUTOR_[1;31mMOVE_[mFIRE_PUNCH      28
+include/constants/party_menu.h[36m:[m#define TUTOR_[1;31mMOVE_[mFURY_CUTTER     29
+include/constants/party_menu.h[36m:[m#define TUTOR_[1;31mMOVE_[mCOUNT           30
+include/constants/party_menu.h[36m:[m#define PARTY_MENU_TYPE_[1;31mMOVE_[mRELEARNER            7 
+include/constants/party_menu.h[36m:[m#define PARTY_ACTION_[1;31mMOVE_[mTUTOR         12
+include/constants/party_menu.h[36m:[m#define PARTY_MSG_[1;31mMOVE_[mTO_WHERE             3 
+include/constants/pokemon.h[36m:[m#define LEVEL_UP_[1;31mMOVE_[mID   0x01FF
+include/constants/pokemon.h[36m:[m#define LEVEL_UP_[1;31mMOVE_[mLV   0xFE00
+include/constants/pokemon.h[36m:[m#define FLAG_MIRROR_[1;31mMOVE_[mAFFECTED   (1 << 4)
+include/constants/pokemon.h[36m:[m#define EVO_[1;31mMOVE_[mMEGA_EVOLUTION           0xfffe // Mega Evolution that checks for a move instead of held item.
+include/constants/pokemon.h[36m:[m#define EVO_[1;31mMOVE_[mTYPE                     24     // Pokémon levels up, knows move with specified type
+include/constants/songs.h[36m:[m#define MUS_[1;31mMOVE_[mDELETED            378 // MUS_ME_WASURE
+include/contest.h[36m:[m    CONTEST_STRING_[1;31mMOVE_[mUP_LINE,
+include/contest.h[36m:[m    CONTEST_STRING_[1;31mMOVE_[mBACK_LINE,
+include/data.h[36m:[mextern const u8 gMoveNames[MOVES_COUNT][[1;31mMOVE_[mNAME_LENGTH + 1];
+include/move_relearner.h[36m:[m#ifndef GUARD_[1;31mMOVE_[mRELEARNER_H
+include/move_relearner.h[36m:[m#define GUARD_[1;31mMOVE_[mRELEARNER_H
+include/move_relearner.h[36m:[m#endif //GUARD_[1;31mMOVE_[mRELEARNER_H
+include/player_pc.h[36m:[m    MAILBOX_[1;31mMOVE_[mTO_BAG,
+include/pokemon_animation.h[36m:[m#define ANIM_TIP_[1;31mMOVE_[mFORWARD                   26
+include/pokenav.h[36m:[m    POKENAV_MENU_FUNC_[1;31mMOVE_[mCURSOR,
+include/pokenav.h[36m:[m    POKENAV_MC_FUNC_[1;31mMOVE_[mOPTIONS_CURSOR,
+include/region_map.h[36m:[m    MAP_INPUT_[1;31mMOVE_[mSTART,
+include/region_map.h[36m:[m    MAP_INPUT_[1;31mMOVE_[mCONT,
+include/region_map.h[36m:[m    MAP_INPUT_[1;31mMOVE_[mEND,
+include/sound.h[36m:[m    FANFARE_[1;31mMOVE_[mDELETED,
+src/apprentice.c[36m:[m    u16 moves[MULTI_PARTY_SIZE][NUM_WHICH_[1;31mMOVE_[mQUESTIONS];
+src/apprentice.c[36m:[m    u8 moveSlots[MULTI_PARTY_SIZE][NUM_WHICH_[1;31mMOVE_[mQUESTIONS];
+src/apprentice.c[36m:[m            for (count = 0, i = 0; i < NUM_WHICH_[1;31mMOVE_[mQUESTIONS; i++)
+src/apprentice.c[36m:[m                if (gApprenticePartyMovesData->moves[monId][i] != [1;31mMOVE_[mNONE)
+src/apprentice.c[36m:[m    for (i = 0; i < NUM_WHICH_[1;31mMOVE_[mQUESTIONS; i++)
+src/apprentice.c[36m:[m    u16 moveId = [1;31mMOVE_[mNONE;
+src/apprentice.c[36m:[m    for (i = 0; i < NUM_WHICH_[1;31mMOVE_[mQUESTIONS; i++)
+src/apprentice.c[36m:[m        return [1;31mMOVE_[mNONE;
+src/apprentice.c[36m:[m            gSaveBlock2Ptr->apprentices[0].party[i].moves[j] = [1;31mMOVE_[mNONE;
+src/bard_music.c[36m:[m        case EC_GROUP_[1;31mMOVE_[m1:
+src/bard_music.c[36m:[m        case EC_GROUP_[1;31mMOVE_[m2:
+src/battle_ai_main.c[36m:[m        if (gBattleMons[sBattler_AI].moves[i] != [1;31mMOVE_[mNONE)
+src/battle_ai_main.c[36m:[m                if (AI_THINKING_STRUCT->moveConsidered != [1;31mMOVE_[mNONE
+src/battle_ai_main.c[36m:[m    if (!(gBattleMoves[move].target & [1;31mMOVE_[mTARGET_USER))
+src/battle_ai_main.c[36m:[m          && move != [1;31mMOVE_[mTHOUSAND_ARROWS)
+src/battle_ai_main.c[36m:[m                if (moveType == TYPE_DARK && !IS_[1;31mMOVE_[mSTATUS(move))
+src/battle_ai_main.c[36m:[m                if (!IS_[1;31mMOVE_[mSTATUS(move)
+src/battle_ai_main.c[36m:[m                  && move != [1;31mMOVE_[mPLAY_NICE && move != [1;31mMOVE_[mNOBLE_ROAR && move != [1;31mMOVE_[mTEARFUL_LOOK && move != [1;31mMOVE_[mVENOM_DRENCH)
+src/battle_ai_main.c[36m:[m                if (IS_[1;31mMOVE_[mSTATUS(move))
+src/battle_ai_main.c[36m:[m                    if (TestMoveFlags(move, FLAG_MAGIC_COAT_AFFECTED) && moveTarget & ([1;31mMOVE_[mTARGET_BOTH | [1;31mMOVE_[mTARGET_FOES_AND_ALLY | [1;31mMOVE_[mTARGET_OPPONENTS_FIELD))
+src/battle_ai_main.c[36m:[m        if (AI_DATA->atkAbility == ABILITY_PRANKSTER && IS_BATTLER_OF_TYPE(battlerDef, TYPE_DARK) && IS_[1;31mMOVE_[mSTATUS(move)
+src/battle_ai_main.c[36m:[m          && !(moveTarget & ([1;31mMOVE_[mTARGET_OPPONENTS_FIELD | [1;31mMOVE_[mTARGET_USER)))
+src/battle_ai_main.c[36m:[m    } // end check [1;31mMOVE_[mTARGET_USER
+src/battle_ai_main.c[36m:[m            if (move == [1;31mMOVE_[mSTUFF_CHEEKS && ItemId_GetPocket(gBattleMons[battlerAtk].item) != POCKET_BERRIES)
+src/battle_ai_main.c[36m:[m            if (predictedMove == [1;31mMOVE_[mNONE || GetBattleMoveSplit(predictedMove) == SPLIT_STATUS
+src/battle_ai_main.c[36m:[m                    if (gLastMoves[battlerDef] == [1;31mMOVE_[mNONE || gLastMoves[battlerDef] == 0xFFFF)
+src/battle_ai_main.c[36m:[m                else if (predictedMove == [1;31mMOVE_[mNONE)
+src/battle_ai_main.c[36m:[m                    if (gLastMoves[battlerDef] == [1;31mMOVE_[mNONE || gLastMoves[battlerDef] == 0xFFFF)
+src/battle_ai_main.c[36m:[m                else if (predictedMove == [1;31mMOVE_[mNONE)
+src/battle_ai_main.c[36m:[m            else if (move == [1;31mMOVE_[mFAKE_OUT) // filter out first impression
+src/battle_ai_main.c[36m:[m              || (AI_DATA->partnerMove != [1;31mMOVE_[mNONE && IS_[1;31mMOVE_[mSTATUS(AI_DATA->partnerMove))
+src/battle_ai_main.c[36m:[m                if (gLastMoves[battlerDef] == [1;31mMOVE_[mNONE
+src/battle_ai_main.c[36m:[m            else if (predictedMove == [1;31mMOVE_[mNONE)
+src/battle_ai_main.c[36m:[m            if (gLastMoves[battlerDef] == [1;31mMOVE_[mNONE)
+src/battle_ai_main.c[36m:[m                case [1;31mMOVE_[mQUICK_GUARD:
+src/battle_ai_main.c[36m:[m                case [1;31mMOVE_[mWIDE_GUARD:
+src/battle_ai_main.c[36m:[m                case [1;31mMOVE_[mCRAFTY_SHIELD:
+src/battle_ai_main.c[36m:[m                case [1;31mMOVE_[mMAT_BLOCK:
+src/battle_ai_main.c[36m:[m                if (move != [1;31mMOVE_[mQUICK_GUARD
+src/battle_ai_main.c[36m:[m                  && move != [1;31mMOVE_[mWIDE_GUARD
+src/battle_ai_main.c[36m:[m                  && move != [1;31mMOVE_[mCRAFTY_SHIELD) //These moves have infinite usage
+src/battle_ai_main.c[36m:[m            if (predictedMove != [1;31mMOVE_[mNONE
+src/battle_ai_main.c[36m:[m              && (move == [1;31mMOVE_[mFLY || move == [1;31mMOVE_[mBOUNCE))
+src/battle_ai_main.c[36m:[m            if (predictedMove != [1;31mMOVE_[mNONE)
+src/battle_ai_main.c[36m:[m                if (AI_DATA->partnerMove != [1;31mMOVE_[mNONE
+src/battle_ai_main.c[36m:[m            if (PartnerMoveIs(AI_DATA->battlerAtkPartner, AI_DATA->partnerMove, [1;31mMOVE_[mTRICK_ROOM))
+src/battle_ai_main.c[36m:[m                case [1;31mMOVE_[mEFFECT_BURN:
+src/battle_ai_main.c[36m:[m                case [1;31mMOVE_[mEFFECT_PARALYSIS:
+src/battle_ai_main.c[36m:[m                case [1;31mMOVE_[mEFFECT_POISON:
+src/battle_ai_main.c[36m:[m                case [1;31mMOVE_[mEFFECT_TOXIC:
+src/battle_ai_main.c[36m:[m                case [1;31mMOVE_[mEFFECT_FREEZE:
+src/battle_ai_main.c[36m:[m            case [1;31mMOVE_[mTRICK_OR_TREAT:
+src/battle_ai_main.c[36m:[m            case [1;31mMOVE_[mFORESTS_CURSE:
+src/battle_ai_main.c[36m:[m                if (instructedMove == [1;31mMOVE_[mNONE
+src/battle_ai_main.c[36m:[m                    if (gBattleMoves[instructedMove].target & ([1;31mMOVE_[mTARGET_SELECTED
+src/battle_ai_main.c[36m:[m                                                             | [1;31mMOVE_[mTARGET_DEPENDS
+src/battle_ai_main.c[36m:[m                                                             | [1;31mMOVE_[mTARGET_RANDOM
+src/battle_ai_main.c[36m:[m                                                             | [1;31mMOVE_[mTARGET_BOTH
+src/battle_ai_main.c[36m:[m                                                             | [1;31mMOVE_[mTARGET_FOES_AND_ALLY
+src/battle_ai_main.c[36m:[m                                                             | [1;31mMOVE_[mTARGET_OPPONENTS_FIELD)
+src/battle_ai_main.c[36m:[m                      && instructedMove != [1;31mMOVE_[mMIND_BLOWN && instructedMove != [1;31mMOVE_[mSTEEL_BEAM)
+src/battle_ai_main.c[36m:[m                    else if (instructedMove != [1;31mMOVE_[mMIND_BLOWN)
+src/battle_ai_main.c[36m:[m            if (predictedMove != [1;31mMOVE_[mNONE)
+src/battle_ai_main.c[36m:[m                if (IS_[1;31mMOVE_[mSTATUS(predictedMove) || GetWhoStrikesFirst(battlerAtk, battlerDef, TRUE) == 1) // opponent going first
+src/battle_ai_main.c[36m:[m              || PartnerMoveIs(AI_DATA->battlerAtkPartner, AI_DATA->partnerMove, [1;31mMOVE_[mTAILWIND)
+src/battle_ai_main.c[36m:[m        if (GetMoveDamageResult(move) == [1;31mMOVE_[mPOWER_DISCOURAGED)
+src/battle_ai_main.c[36m:[m        if (GetMoveDamageResult(move) != [1;31mMOVE_[mPOWER_BEST)
+src/battle_ai_main.c[36m:[m            if (IS_[1;31mMOVE_[mSTATUS(move))
+src/battle_ai_main.c[36m:[m                if (IsTrappingMoveEffect(effect) || predictedMove == [1;31mMOVE_[mINGRAIN)
+src/battle_ai_main.c[36m:[m                    if (!IS_[1;31mMOVE_[mSTATUS(move) && (gBattleMoves[move].target & ([1;31mMOVE_[mTARGET_BOTH | [1;31mMOVE_[mTARGET_FOES_AND_ALLY)))
+src/battle_ai_main.c[36m:[m          && (HasMove(battlerAtkPartner, [1;31mMOVE_[mEARTHQUAKE) || HasMove(battlerAtkPartner, [1;31mMOVE_[mMAGNITUDE))
+src/battle_ai_main.c[36m:[m          && (AI_GetMoveEffectiveness([1;31mMOVE_[mEARTHQUAKE, battlerAtk, battlerAtkPartner) != AI_EFFECTIVENESS_x0)) // Doesn't resist ground move
+src/battle_ai_main.c[36m:[m        if (GetMoveDamageResult(move) == [1;31mMOVE_[mPOWER_DISCOURAGED)
+src/battle_ai_main.c[36m:[m            if (!partnerProtecting && gBattleMoves[move].target != [1;31mMOVE_[mTARGET_BOTH && !DoesBattlerIgnoreAbilityChecks(AI_DATA->atkAbility, move))
+src/battle_ai_main.c[36m:[m                    if (moveType == TYPE_WATER && GetMoveDamageResult(move) == [1;31mMOVE_[mPOWER_WEAK)
+src/battle_ai_main.c[36m:[m                      && !IS_[1;31mMOVE_[mSTATUS(move)
+src/battle_ai_main.c[36m:[m                    if (!IS_[1;31mMOVE_[mSTATUS(move)
+src/battle_ai_main.c[36m:[m                  && !IS_[1;31mMOVE_[mSTATUS(move)
+src/battle_ai_main.c[36m:[m                    if (instructedMove != [1;31mMOVE_[mNONE
+src/battle_ai_main.c[36m:[m                      && !IS_[1;31mMOVE_[mSTATUS(instructedMove)
+src/battle_ai_main.c[36m:[m                      && gBattleMoves[instructedMove].target & ([1;31mMOVE_[mTARGET_BOTH | [1;31mMOVE_[mTARGET_FOES_AND_ALLY)) //Use instruct on multi-target moves
+src/battle_ai_main.c[36m:[m    if (!IS_[1;31mMOVE_[mSTATUS(move) && gBattleMoves[move].accuracy == 0)
+src/battle_ai_main.c[36m:[m    if (gBattleMoves[move].power != 0 && GetMoveDamageResult(move) == [1;31mMOVE_[mPOWER_WEAK)
+src/battle_ai_main.c[36m:[m    if (AI_THINKING_STRUCT->aiFlags & AI_FLAG_PREFER_STATUS_MOVES && IS_[1;31mMOVE_[mSTATUS(move) && effectiveness != AI_EFFECTIVENESS_x0)
+src/battle_ai_main.c[36m:[m            if (IS_[1;31mMOVE_[mPHYSICAL(move) && gBattleMoves[move].effect != EFFECT_FACADE)
+src/battle_ai_main.c[36m:[m        if (predictedMove != [1;31mMOVE_[mNONE)
+src/battle_ai_main.c[36m:[m            if (gLastMoves[battlerDef] != [1;31mMOVE_[mNONE && gLastMoves[battlerDef] != 0xFFFF)
+src/battle_ai_main.c[36m:[m                if (gLastMoves[battlerDef] != [1;31mMOVE_[mNONE
+src/battle_ai_main.c[36m:[m            else if (predictedMove != [1;31mMOVE_[mNONE && IS_[1;31mMOVE_[mSTATUS(predictedMove))
+src/battle_ai_main.c[36m:[m            predictedMove = [1;31mMOVE_[mNONE;
+src/battle_ai_main.c[36m:[m        case [1;31mMOVE_[mQUICK_GUARD:
+src/battle_ai_main.c[36m:[m            if (predictedMove != [1;31mMOVE_[mNONE && gBattleMoves[predictedMove].priority > 0)
+src/battle_ai_main.c[36m:[m        case [1;31mMOVE_[mWIDE_GUARD:
+src/battle_ai_main.c[36m:[m            if (predictedMove != [1;31mMOVE_[mNONE && gBattleMoves[predictedMove].target & ([1;31mMOVE_[mTARGET_FOES_AND_ALLY | [1;31mMOVE_[mTARGET_BOTH))
+src/battle_ai_main.c[36m:[m            else if (isDoubleBattle && gBattleMoves[AI_DATA->partnerMove].target & [1;31mMOVE_[mTARGET_FOES_AND_ALLY)
+src/battle_ai_main.c[36m:[m        case [1;31mMOVE_[mCRAFTY_SHIELD:
+src/battle_ai_main.c[36m:[m            if (predictedMove != [1;31mMOVE_[mNONE && IS_[1;31mMOVE_[mSTATUS(predictedMove) && !(gBattleMoves[predictedMove].target & [1;31mMOVE_[mTARGET_USER))
+src/battle_ai_main.c[36m:[m        case [1;31mMOVE_[mMAT_BLOCK:
+src/battle_ai_main.c[36m:[m            if (gDisableStructs[battlerAtk].isFirstTurn && predictedMove != [1;31mMOVE_[mNONE
+src/battle_ai_main.c[36m:[m              && !IS_[1;31mMOVE_[mSTATUS(predictedMove) && !(gBattleMoves[predictedMove].target & [1;31mMOVE_[mTARGET_USER))
+src/battle_ai_main.c[36m:[m        case [1;31mMOVE_[mKINGS_SHIELD:
+src/battle_ai_main.c[36m:[m        if (predictedMove != [1;31mMOVE_[mNONE && !isDoubleBattle)
+src/battle_ai_main.c[36m:[m        if (move == [1;31mMOVE_[mFAKE_OUT    // filter out first impression
+src/battle_ai_main.c[36m:[m        case [1;31mMOVE_[mDEFOG:
+src/battle_ai_main.c[36m:[m        case [1;31mMOVE_[mRAPID_SPIN:
+src/battle_ai_main.c[36m:[m          && move != [1;31mMOVE_[mSPOTLIGHT
+src/battle_ai_main.c[36m:[m          && (move != [1;31mMOVE_[mRAGE_POWDER || IsAffectedByPowder(battlerDef, AI_DATA->defAbility, AI_DATA->defHoldEffect)) // Rage Powder doesn't affect powder immunities
+src/battle_ai_main.c[36m:[m            if (predictedMoveOnPartner != [1;31mMOVE_[mNONE && !IS_[1;31mMOVE_[mSTATUS(predictedMoveOnPartner))
+src/battle_ai_main.c[36m:[m        if (IS_[1;31mMOVE_[mSTATUS(predictedMove))
+src/battle_ai_main.c[36m:[m            if (move != [1;31mMOVE_[mBESTOW && AI_DATA->atkItem == ITEM_NONE)
+src/battle_ai_main.c[36m:[m        if (IS_[1;31mMOVE_[mSTATUS(predictedMove) && gBattleMoves[predictedMove].target & ([1;31mMOVE_[mTARGET_SELECTED | [1;31mMOVE_[mTARGET_OPPONENTS_FIELD | [1;31mMOVE_[mTARGET_BOTH))
+src/battle_ai_main.c[36m:[m        if (predictedMove != [1;31mMOVE_[mNONE && HasMove(battlerAtk, predictedMove))
+src/battle_ai_main.c[36m:[m        if (predictedMove != [1;31mMOVE_[mNONE && TestMoveFlags(predictedMove, FLAG_SNATCH_AFFECTED))
+src/battle_ai_main.c[36m:[m        case [1;31mMOVE_[mEFFECT_BURN:
+src/battle_ai_main.c[36m:[m        case [1;31mMOVE_[mEFFECT_FLINCH:
+src/battle_ai_main.c[36m:[m        case [1;31mMOVE_[mEFFECT_PARALYSIS:
+src/battle_ai_main.c[36m:[m        case [1;31mMOVE_[mEFFECT_POISON:
+src/battle_ai_main.c[36m:[m        case [1;31mMOVE_[mEFFECT_TOXIC:
+src/battle_ai_main.c[36m:[m        case [1;31mMOVE_[mEFFECT_FREEZE:
+src/battle_ai_main.c[36m:[m        if (predictedMove != [1;31mMOVE_[mNONE && !IS_[1;31mMOVE_[mSTATUS(predictedMove) && gBattleMoves[predictedMove].type == TYPE_FIRE)
+src/battle_ai_main.c[36m:[m        if (predictedMove != [1;31mMOVE_[mNONE && TestMoveFlags(predictedMove, FLAG_SOUND) && GetWhoStrikesFirst(battlerAtk, battlerDef, TRUE) == 0)
+src/battle_ai_main.c[36m:[m        if (GetWhoStrikesFirst(battlerAtk, battlerDef, TRUE) == 0 && predictedMove != [1;31mMOVE_[mNONE && IsHealingMoveEffect(gBattleMoves[predictedMove].effect))
+src/battle_ai_main.c[36m:[m        if (predictedMove != [1;31mMOVE_[mNONE && gBattleMoves[predictedMove].type == TYPE_NORMAL
+src/battle_ai_main.c[36m:[m          && !(AI_GetTypeEffectiveness([1;31mMOVE_[mEARTHQUAKE, battlerDef, battlerAtk) == AI_EFFECTIVENESS_x0)) // Doesn't resist ground move
+src/battle_ai_main.c[36m:[m        if (predictedMove != [1;31mMOVE_[mNONE && GetWhoStrikesFirst(battlerAtk, battlerDef, TRUE) == 0 // Attacker goes first
+src/battle_ai_main.c[36m:[m          && !IS_[1;31mMOVE_[mSTATUS(move) && AI_GetTypeEffectiveness(predictedMove, battlerDef, battlerAtk) != AI_EFFECTIVENESS_x0)
+src/battle_ai_main.c[36m:[m        if (!IsBattlerIncapacitated(battlerDef, AI_DATA->defAbility) && predictedMove != [1;31mMOVE_[mNONE)
+src/battle_ai_main.c[36m:[m            if (GetMoveDamageResult(predictedMove) >= [1;31mMOVE_[mPOWER_GOOD && GetBattleMoveSplit(predictedMove) == SPLIT_PHYSICAL)
+src/battle_ai_main.c[36m:[m        if (!IsBattlerIncapacitated(battlerDef, AI_DATA->defAbility) && predictedMove != [1;31mMOVE_[mNONE)
+src/battle_ai_main.c[36m:[m            if (GetMoveDamageResult(predictedMove) >= [1;31mMOVE_[mPOWER_GOOD && GetBattleMoveSplit(predictedMove) == SPLIT_SPECIAL)
+src/battle_ai_main.c[36m:[m    if (GetMoveDamageResult(move) == [1;31mMOVE_[mPOWER_BEST)
+src/battle_ai_main.c[36m:[m      || GetMoveDamageResult(move) != [1;31mMOVE_[mPOWER_DISCOURAGED
+src/battle_ai_main.c[36m:[m        if (gLastMoves[battlerAtk] == [1;31mMOVE_[mPROTECT || gLastMoves[battlerAtk] == [1;31mMOVE_[mDETECT)
+src/battle_ai_main.c[36m:[m            if (IS_[1;31mMOVE_[mSTATUS(move))
+src/battle_ai_switch_items.c[36m:[m        if (move != [1;31mMOVE_[mNONE)
+src/battle_ai_switch_items.c[36m:[m            if (move != [1;31mMOVE_[mNONE)
+src/battle_ai_switch_items.c[36m:[m    if (FindMonWithFlagsAndSuperEffective([1;31mMOVE_[mRESULT_DOESNT_AFFECT_FOE, 1))
+src/battle_ai_switch_items.c[36m:[m    if (FindMonWithFlagsAndSuperEffective([1;31mMOVE_[mRESULT_NOT_VERY_EFFECTIVE, 1))
+src/battle_ai_switch_items.c[36m:[m            if (move == [1;31mMOVE_[mNONE)
+src/battle_ai_switch_items.c[36m:[m            if (move == [1;31mMOVE_[mNONE)
+src/battle_ai_switch_items.c[36m:[m    if (FindMonWithFlagsAndSuperEffective([1;31mMOVE_[mRESULT_DOESNT_AFFECT_FOE, 2)
+src/battle_ai_switch_items.c[36m:[m        || FindMonWithFlagsAndSuperEffective([1;31mMOVE_[mRESULT_NOT_VERY_EFFECTIVE, 3))
+src/battle_ai_switch_items.c[36m:[m            if (GetMonData(&party[i], MON_DATA_MOVE1 + j, NULL) == [1;31mMOVE_[mBATON_PASS)
+src/battle_ai_switch_items.c[36m:[m                if (move != [1;31mMOVE_[mNONE && AI_GetTypeEffectiveness(move, gActiveBattler, opposingBattler) >= UQ_4_12(2.0))
+src/battle_ai_switch_items.c[36m:[m            if (move != [1;31mMOVE_[mNONE && gBattleMoves[move].power != 0)
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mMOONGEIST_BEAM,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mSUNSTEEL_STRIKE,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mPHOTON_GEYSER,
+src/battle_ai_util.c[36m:[m    #ifdef [1;31mMOVE_[mLIGHT_THAT_BURNS_THE_SKY
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mLIGHT_THAT_BURNS_THE_SKY,
+src/battle_ai_util.c[36m:[m    #ifdef [1;31mMOVE_[mMENACING_MOONRAZE_MAELSTROM
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mMENACING_MOONRAZE_MAELSTROM,
+src/battle_ai_util.c[36m:[m    #ifdef [1;31mMOVE_[mSEARING_SUNRAZE_SMASH
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mSEARING_SUNRAZE_SMASH,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mINSTRUCT,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mBIDE,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mFOCUS_PUNCH,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mBEAK_BLAST,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mSHELL_TRAP,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mSKETCH,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mTRANSFORM,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mMIMIC,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mKINGS_SHIELD,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mSTRUGGLE,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mBOUNCE,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mDIG,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mDIVE,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mFLY,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mFREEZE_SHOCK,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mGEOMANCY,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mICE_BURN,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mPHANTOM_FORCE,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mRAZOR_WIND,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mSHADOW_FORCE,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mSKULL_BASH,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mSKY_ATTACK,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mSKY_DROP,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mSOLAR_BEAM,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mSOLAR_BLADE,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mHYPER_BEAM,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mBLAST_BURN,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mHYDRO_CANNON,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mFRENZY_PLANT,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mGIGA_IMPACT,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mROCK_WRECKER,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mROAR_OF_TIME,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mPRISMATIC_LASER,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mMETEOR_ASSAULT,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mETERNABEAM,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mASSIST,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mCOPYCAT,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mME_FIRST,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mMETRONOME,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mMIRROR_MOVE,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mNATURE_POWER,
+src/battle_ai_util.c[36m:[m    [1;31mMOVE_[mSLEEP_TALK,
+src/battle_ai_util.c[36m:[m    if (++(*index) >= AI_[1;31mMOVE_[mHISTORY_COUNT)
+src/battle_ai_util.c[36m:[m        if (BATTLE_HISTORY->usedMoves[battlerId][i] == [1;31mMOVE_[mNONE)
+src/battle_ai_util.c[36m:[m        if (gBattleMoves[move].effect == EFFECT_PROTECT && move != [1;31mMOVE_[mENDURE)
+src/battle_ai_util.c[36m:[m        if (moves[i] != [1;31mMOVE_[mNONE
+src/battle_ai_util.c[36m:[m            GET_[1;31mMOVE_[mTYPE(moves[i], moveType);
+src/battle_ai_util.c[36m:[m    GET_[1;31mMOVE_[mTYPE(move, moveType);
+src/battle_ai_util.c[36m:[m        if (IS_[1;31mMOVE_[mPHYSICAL(move1) && !IS_[1;31mMOVE_[mPHYSICAL(move2))
+src/battle_ai_util.c[36m:[m        if (IS_[1;31mMOVE_[mPHYSICAL(move2) && !IS_[1;31mMOVE_[mPHYSICAL(move1))
+src/battle_ai_util.c[36m:[m            if (gBattleMons[sBattler_AI].moves[checkedMove] != [1;31mMOVE_[mNONE
+src/battle_ai_util.c[36m:[m            AI_THINKING_STRUCT->funcResult = [1;31mMOVE_[mPOWER_BEST;
+src/battle_ai_util.c[36m:[m            AI_THINKING_STRUCT->funcResult = [1;31mMOVE_[mPOWER_GOOD;
+src/battle_ai_util.c[36m:[m            AI_THINKING_STRUCT->funcResult = [1;31mMOVE_[mPOWER_WEAK;
+src/battle_ai_util.c[36m:[m        AI_THINKING_STRUCT->funcResult = [1;31mMOVE_[mPOWER_DISCOURAGED; // Highly discouraged in terms of power.
+src/battle_ai_util.c[36m:[m    GET_[1;31mMOVE_[mTYPE(move, moveType);
+src/battle_ai_util.c[36m:[m    u32 unusable = CheckMoveLimitations(battlerDef, 0, 0xFF & ~[1;31mMOVE_[mLIMITATION_PP);
+src/battle_ai_util.c[36m:[m        if (moves[i] != [1;31mMOVE_[mNONE && moves[i] != 0xFFFF && !(unusable & gBitTable[i])
+src/battle_ai_util.c[36m:[m    u32 unusable = CheckMoveLimitations(battlerDef, 0, 0xFF & ~[1;31mMOVE_[mLIMITATION_PP);
+src/battle_ai_util.c[36m:[m    if (move != [1;31mMOVE_[mNONE && move != 0xFFFF && !(unusable & gBitTable[i]) && AI_CalcDamage(move, battlerDef, battlerAtk) >= gBattleMons[battlerAtk].hp)
+src/battle_ai_util.c[36m:[m    u32 unusable = CheckMoveLimitations(battlerDef, 0, 0xFF & ~[1;31mMOVE_[mLIMITATION_PP);
+src/battle_ai_util.c[36m:[m        if (moves[i] != [1;31mMOVE_[mNONE && moves[i] != 0xFFFF && !(unusable & gBitTable[i]) && dmg >= hpCheck)
+src/battle_ai_util.c[36m:[m    case [1;31mMOVE_[mDISABLE:
+src/battle_ai_util.c[36m:[m    case [1;31mMOVE_[mATTRACT:
+src/battle_ai_util.c[36m:[m    case [1;31mMOVE_[mENCORE:
+src/battle_ai_util.c[36m:[m    case [1;31mMOVE_[mTORMENT:
+src/battle_ai_util.c[36m:[m    case [1;31mMOVE_[mTAUNT:
+src/battle_ai_util.c[36m:[m    case [1;31mMOVE_[mHEAL_BLOCK:
+src/battle_ai_util.c[36m:[m    if (move == [1;31mMOVE_[mSKY_DROP
+src/battle_ai_util.c[36m:[m      || move == [1;31mMOVE_[mSNIPE_SHOT
+src/battle_ai_util.c[36m:[m    if (atkAbility == ABILITY_HUSTLE && IS_[1;31mMOVE_[mPHYSICAL(move))
+src/battle_ai_util.c[36m:[m         || (((gBattleWeather & WEATHER_HAIL_ANY) && move == [1;31mMOVE_[mBLIZZARD))))
+src/battle_ai_util.c[36m:[m      || HasMove(battler, [1;31mMOVE_[mBLIZZARD)
+src/battle_ai_util.c[36m:[m    /*if (GetMoveResultFlags(predictedMove) & ([1;31mMOVE_[mRESULT_NO_EFFECT | [1;31mMOVE_[mRESULT_MISSED))
+src/battle_ai_util.c[36m:[m        if (predictedMove != [1;31mMOVE_[mNONE && predictedMove != 0xFFFF && !IS_[1;31mMOVE_[mSTATUS(predictedMove))
+src/battle_ai_util.c[36m:[m        if (onlyOffensive && IS_[1;31mMOVE_[mSTATUS(moves[i]))
+src/battle_ai_util.c[36m:[m        if (moves[i] != [1;31mMOVE_[mNONE && moves[i] != 0xFFFF && GetBattleMoveSplit(moves[i]) != split)
+src/battle_ai_util.c[36m:[m        if (moves[i] != [1;31mMOVE_[mNONE && moves[i] != 0xFFFF && GetBattleMoveSplit(moves[i]) == split)
+src/battle_ai_util.c[36m:[m        if (moves[i] != [1;31mMOVE_[mNONE && moves[i] != 0xFFFF && gBattleMoves[moves[i]].type == type)
+src/battle_ai_util.c[36m:[m        if (moves[i] != [1;31mMOVE_[mNONE && moves[i] != 0xFFFF && gBattleMoves[moves[i]].effect == moveEffect)
+src/battle_ai_util.c[36m:[m        if (moves[i] != [1;31mMOVE_[mNONE && moves[i] != 0xFFFF && moves[i] == move)
+src/battle_ai_util.c[36m:[m        if (moves[i] == [1;31mMOVE_[mNONE || moves[i] == 0xFFFF)
+src/battle_ai_util.c[36m:[m            if (ignoreStatus && IS_[1;31mMOVE_[mSTATUS(moves[i]))
+src/battle_ai_util.c[36m:[m            else if ((!IS_[1;31mMOVE_[mSTATUS(moves[i]) && gBattleMoves[moves[i]].accuracy == 0)
+src/battle_ai_util.c[36m:[m              || gBattleMoves[moves[i]].target & ([1;31mMOVE_[mTARGET_USER | [1;31mMOVE_[mTARGET_OPPONENTS_FIELD))
+src/battle_ai_util.c[36m:[m        if (moves[i] == [1;31mMOVE_[mNONE)
+src/battle_ai_util.c[36m:[m        if (moves[i] != [1;31mMOVE_[mNONE && moves[i] != 0xFFFF && IsHealingMoveEffect(gBattleMoves[moves[i]].effect))
+src/battle_ai_util.c[36m:[m        if (moves[i] != [1;31mMOVE_[mNONE && moves[i] != 0xFFFF && IsTrappingMoveEffect(gBattleMoves[moves[i]].effect))
+src/battle_ai_util.c[36m:[m        if (moves[i] != [1;31mMOVE_[mNONE && moves[i] != 0xFFFF && IsThawingMove(battlerId, moves[i]))
+src/battle_ai_util.c[36m:[m        if (moves[i] != [1;31mMOVE_[mNONE && moves[i] != 0xFFFF && gBattleMoves[moves[i]].power != 0)
+src/battle_ai_util.c[36m:[m        if (moves[i] != [1;31mMOVE_[mNONE && moves[i] != 0xFFFF
+src/battle_ai_util.c[36m:[m        if (moves[i] != [1;31mMOVE_[mNONE && moves[i] != 0xFFFF && TestMoveFlags(moves[i], flags))
+src/battle_ai_util.c[36m:[m                    if (!IS_[1;31mMOVE_[mSTATUS(move) && (shouldSwitch
+src/battle_ai_util.c[36m:[m                    if (!IS_[1;31mMOVE_[mSTATUS(move) && (AtMaxHp(battlerDef) && (AI_DATA->defHoldEffect == HOLD_EFFECT_FOCUS_SASH
+src/battle_ai_util.c[36m:[m                    if (gSideStatuses[battlerAtk] & SIDE_STATUS_SPIKES && switchScore >= SWITCHING_INCREASE_CAN_RE[1;31mMOVE_[mHAZARDS)
+src/battle_ai_util.c[36m:[m                    if (IS_[1;31mMOVE_[mSTATUS(move) && (shouldSwitch //Damaging move
+src/battle_ai_util.c[36m:[m                        //if (gSideStatuses[battlerAtk] & SIDE_STATUS_SPIKES && switchScore >= SWITCHING_INCREASE_CAN_RE[1;31mMOVE_[mHAZARDS)
+src/battle_ai_util.c[36m:[m            index = AI_[1;31mMOVE_[mHISTORY_COUNT - 1;
+src/battle_ai_util.c[36m:[m    if ((gBattleMons[battler].status1 & STATUS1_SLEEP) == 1 && FindMoveUsedXTurnsAgo(battler, 2) == [1;31mMOVE_[mREST)
+src/battle_ai_util.c[36m:[m        return [1;31mMOVE_[mNONE;   // TODO: prediction?
+src/battle_ai_util.c[36m:[m        return [1;31mMOVE_[mNONE;
+src/battle_ai_util.c[36m:[m//PARTNER_[1;31mMOVE_[mEFFECT_IS_SAME
+src/battle_ai_util.c[36m:[m      && gChosenMoveByBattler[battlerAtkPartner] != [1;31mMOVE_[mNONE
+src/battle_ai_util.c[36m:[m//PARTNER_[1;31mMOVE_[mEFFECT_IS_SAME_NO_TARGET
+src/battle_ai_util.c[36m:[m      && gChosenMoveByBattler[battlerAtkPartner] != [1;31mMOVE_[mNONE)
+src/battle_ai_util.c[36m:[m//PARTNER_[1;31mMOVE_[mEFFECT_IS_STATUS_SAME_TARGET
+src/battle_ai_util.c[36m:[m    if (gChosenMoveByBattler[battlerAtkPartner] != [1;31mMOVE_[mNONE
+src/battle_ai_util.c[36m:[m//PARTNER_[1;31mMOVE_[mEFFECT_IS_WEATHER
+src/battle_ai_util.c[36m:[m    if (gChosenMoveByBattler[battlerAtkPartner] != [1;31mMOVE_[mNONE
+src/battle_ai_util.c[36m:[m//PARTNER_[1;31mMOVE_[mEFFECT_IS_TERRAIN
+src/battle_ai_util.c[36m:[m    if (gChosenMoveByBattler[battlerAtkPartner] != [1;31mMOVE_[mNONE
+src/battle_ai_util.c[36m:[m//PARTNER_[1;31mMOVE_[mIS_TAILWIND_TRICKROOM
+src/battle_ai_util.c[36m:[m    if (gChosenMoveByBattler[battlerAtkPartner] != [1;31mMOVE_[mNONE && partnerMove == moveCheck)
+src/battle_ai_util.c[36m:[m//PARTNER_[1;31mMOVE_[mIS_SAME
+src/battle_ai_util.c[36m:[m    if (gChosenMoveByBattler[battlerAtkPartner] != [1;31mMOVE_[mNONE && move == partnerMove && gBattleStruct->moveTarget[battlerAtkPartner] == battlerDef)
+src/battle_ai_util.c[36m:[m//PARTNER_[1;31mMOVE_[mIS_SAME_NO_TARGET
+src/battle_ai_util.c[36m:[m    if (gChosenMoveByBattler[battlerAtkPartner] != [1;31mMOVE_[mNONE && move == partnerMove)
+src/battle_ai_util.c[36m:[m                if (move != [1;31mMOVE_[mHEAL_BELL || GetMonAbility(&party[i]) != ABILITY_SOUNDPROOF)
+src/battle_ai_util.c[36m:[m            if (pp > 0 && move != [1;31mMOVE_[mNONE)
+src/battle_ai_util.c[36m:[m        if ((HasMoveWithSplit(battlerDef, SPLIT_PHYSICAL)|| IS_[1;31mMOVE_[mPHYSICAL(gLastMoves[battlerDef]))
+src/battle_ai_util.c[36m:[m        if ((HasMoveWithSplit(battlerDef, SPLIT_SPECIAL) || IS_[1;31mMOVE_[mSPECIAL(gLastMoves[battlerDef]))

@@ -34,6 +34,9 @@ OldaleTown_Mart_Pokemart_Expanded: @ 81FC27C
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_PARALYZE_HEAL
 	.2byte ITEM_AWAKENING
+	.2byte ITEM_ORAN_BERRY
+	.2byte ITEM_RARE_CANDY
+	.2byte ITEM_GREPA_BERRY
 	.2byte ITEM_NONE
 	release
 	end

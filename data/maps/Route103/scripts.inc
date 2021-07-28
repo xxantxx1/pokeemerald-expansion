@@ -192,7 +192,14 @@ Route103_Movement_WatchRivalExitFacingEastOrWest: @ 81EC5D6
 	step_end
 
 Route103_EventScript_Boy:: @ 81EC5D9
-	msgbox Route103_Text_ShouldHaveBroughtPotion, MSGBOX_NPC
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_OLD_ROD, DewfordTown_EventScript_HowsFishing
+	msgbox DewfordTown_Text_GettingItchToFish, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq DewfordTown_EventScript_GiveOldRod
+	compare VAR_RESULT, NO
+	goto_if_eq DewfordTown_EventScript_NotGettingItchToFish
 	end
 
 Route103_EventScript_Man:: @ 81EC5E2
@@ -357,4 +364,6 @@ Route103_Text_ShortcutToOldale: @ 81ECBB5
 Route103_Text_RouteSign: @ 81ECC1A
 	.string "ROUTE 103\n"
 	.string "{DOWN_ARROW} OLDALE TOWN$"
+	
 
+	

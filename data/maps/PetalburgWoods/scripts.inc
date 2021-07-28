@@ -447,8 +447,6 @@ PetalburgWoods_Text_HiddenItemsExplanation: @ 822EA8B
 	.string "walking.$"
 
 PetalburgWoods_Text_TryUsingThisItem: @ 822EAFE
-	.string "Oh, neat!\n"
-	.string "That's the BADGE from RUSTBORO GYM!\p"
 	.string "You must be a TRAINER.\n"
 	.string "You should try using this item.$"
 
@@ -478,3 +476,16 @@ PetalburgWoods_Text_TrainerTipsPP: @ 822ED07
 	.string "If a POKéMON runs out of PP, it must be\n"
 	.string "taken to a POKéMON CENTER.$"
 
+	
+PetalburgWoods_EventScript_Pauly:: 
+	trainerbattle_single TRAINER_PAULY, PetalburgWoods_Text_creep_you_out, PetalburgWoods_Text_Creep_me_out
+	msgbox PetalburgWoods_Text_Creep_me_out, MSGBOX_DEFAULT
+	release
+	end
+	
+	
+PetalburgWoods_Text_Creep_me_out: 
+	.string "Actually your POKéMON creeped me out.$"
+	
+PetalburgWoods_Text_creep_you_out: 
+	.string "My BUG POKéMON will creep you out!$"
