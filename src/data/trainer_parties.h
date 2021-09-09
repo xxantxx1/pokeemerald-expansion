@@ -3570,14 +3570,17 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne1[] = {
     }
 };
 
-static const struct TrainerMonItemCustomMoves sParty_Brawly1[] = {
+
+static const struct TrainerMonItemStatusCustomMoves sParty_Brawly1[] = {
     {
     .iv = 0,
     .lvl = 23,
     .species = SPECIES_FALINKS,
     .heldItem = ITEM_LUM_BERRY,
 	.abilityNums = 0,
-    .moves = {MOVE_NO_RETREAT, MOVE_BUG_BITE, MOVE_BRICK_BREAK, MOVE_ROCK_TOMB}
+    .moves = {MOVE_NO_RETREAT, MOVE_BUG_BITE, MOVE_BRICK_BREAK, MOVE_ROCK_TOMB},
+    .status = 0,
+	.hp = 62
     },
     {
     .iv = 0,
@@ -3585,15 +3588,19 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly1[] = {
     .species = SPECIES_HITMONTOP,
     .heldItem = ITEM_BERRY_JUICE,
 	.abilityNums = 0,
-    .moves = {MOVE_FAKE_OUT, MOVE_ROLLING_KICK, MOVE_SUCKER_PUNCH, MOVE_ROCK_TOMB}
+    .moves = {MOVE_FAKE_OUT, MOVE_ROLLING_KICK, MOVE_SUCKER_PUNCH, MOVE_ROCK_TOMB},
+    .status = 0,
+	.hp = 56
     },
     {
     .iv = 0,
     .lvl = 24,
     .species = SPECIES_HARIYAMA,
-    .heldItem = ITEM_FLAME_ORB,
+    .heldItem = ITEM_BERRY_JUICE,
 	.abilityNums = 1,
-    .moves = {MOVE_FAKE_OUT, MOVE_VITAL_THROW, MOVE_KNOCK_OFF, MOVE_ROCK_TOMB}
+    .moves = {MOVE_FAKE_OUT, MOVE_VITAL_THROW, MOVE_KNOCK_OFF, MOVE_ROCK_TOMB},
+    .status = STATUS1_BURN,
+	.hp = 103
     },
     {
     .iv = 0,
@@ -3601,7 +3608,9 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly1[] = {
     .species = SPECIES_CRABOMINABLE,
     .heldItem = ITEM_SITRUS_BERRY,
 	.abilityNums = 1,
-    .moves = {MOVE_ICE_PUNCH, MOVE_ICE_SHARD, MOVE_POWER_UP_PUNCH, MOVE_AQUA_JET}
+    .moves = {MOVE_ICE_PUNCH, MOVE_ICE_SHARD, MOVE_POWER_UP_PUNCH, MOVE_AQUA_JET},
+    .status = 0,
+	.hp = 77
     }
 };
 
@@ -4467,8 +4476,8 @@ static const struct TrainerMonItemStatusCustomMoves sParty_Calvin1[] = {
 	.heldItem = ITEM_ORAN_BERRY,
 	.abilityNums = 0,
     .moves = {MOVE_QUICK_ATTACK, MOVE_DEFENSE_CURL, MOVE_AMNESIA, MOVE_NONE},
-	.status = STATUS1_POISON,
-	.hp = 5
+	.status = 0,
+	.hp = 19
     },
 	{
     .iv = 0,
@@ -4478,7 +4487,7 @@ static const struct TrainerMonItemStatusCustomMoves sParty_Calvin1[] = {
 	.abilityNums = 0,
     .moves = {MOVE_PECK, MOVE_QUICK_ATTACK, MOVE_GROWL, MOVE_NONE},
 	.status = 0,
-	.hp = 20
+	.hp = 19
 	}
 };
 
@@ -4585,14 +4594,16 @@ static const struct TrainerMonItemCustomMoves sParty_Tommy[] = {
 };
 
 
-static const struct TrainerMonItemCustomMoves sParty_Joey[] = {
+static const struct TrainerMonItemStatusCustomMoves sParty_Joey[] = {
     {
     .iv = 0,
     .lvl = 12,
     .species = SPECIES_MACHOP,
-	.heldItem = ITEM_FLAME_ORB,
+	.heldItem = ITEM_RED_CARD,
 	.abilityNums = 0,
-    .moves = {MOVE_PROTECT, MOVE_BULLET_PUNCH, MOVE_ROCK_TOMB, MOVE_LOW_KICK}
+    .moves = {MOVE_REVENGE, MOVE_BULLET_PUNCH, MOVE_ROCK_TOMB, MOVE_LOW_KICK},
+    .status = STATUS1_BURN,
+	.hp = 38
     },
     {
     .iv = 0,
@@ -4600,7 +4611,9 @@ static const struct TrainerMonItemCustomMoves sParty_Joey[] = {
     .species = SPECIES_PATRAT,
 	.heldItem = ITEM_ORAN_BERRY,
 	.abilityNums = 2,
-    .moves = {MOVE_BIDE, MOVE_HEADBUTT, MOVE_BITE, MOVE_BULLET_SEED}
+    .moves = {MOVE_BIDE, MOVE_HEADBUTT, MOVE_BITE, MOVE_BULLET_SEED},
+    .status = 0,
+	.hp = 32
     },
     {
     .iv = 0,
@@ -4608,10 +4621,12 @@ static const struct TrainerMonItemCustomMoves sParty_Joey[] = {
     .species = SPECIES_STARAVIA,
 	.heldItem = ITEM_ORAN_BERRY,
 	.abilityNums = 0,
-    .moves = {MOVE_WING_ATTACK, MOVE_QUICK_ATTACK, MOVE_GROWL, MOVE_ROOST}
+    .moves = {MOVE_WING_ATTACK, MOVE_QUICK_ATTACK, MOVE_GROWL, MOVE_ROOST},
+	.status = 0,
+	.hp = 37
     },
-
-};
+};	
+	
 
 static const struct TrainerMonNoItemCustomMoves sParty_Ben[] = {
     {
@@ -5995,42 +6010,50 @@ static const struct TrainerMonItemCustomMoves sParty_Lao5[] = {
     }
 };
 
-static const struct TrainerMonItemCustomMoves sParty_Jocelyn[] = {
+static const struct TrainerMonItemStatusCustomMoves sParty_Jocelyn[] = {
     {
     .iv = 0,
     .lvl = 21,
     .species = SPECIES_MEDITITE,
-    .heldItem = ITEM_NONE,
+    .heldItem = ITEM_MUSCLE_BAND,
 	.abilityNums = 0,
-    .moves = {MOVE_ROCK_TOMB, MOVE_BULLET_PUNCH, MOVE_FAKE_OUT, MOVE_FORCE_PALM}
+    .moves = {MOVE_ROCK_TOMB, MOVE_BULLET_PUNCH, MOVE_FAKE_OUT, MOVE_FORCE_PALM},
+    .status = 0,
+	.hp = 43
     },
     {
     .iv = 0,
     .lvl = 21,
     .species = SPECIES_TIMBURR,
-    .heldItem = ITEM_FLAME_ORB,
+    .heldItem = ITEM_ORAN_BERRY,
 	.abilityNums = 0,
-    .moves = {MOVE_PROTECT, MOVE_ROCK_TOMB, MOVE_WAKE_UP_SLAP, MOVE_LOW_KICK}
+    .moves = {MOVE_PROTECT, MOVE_ROCK_TOMB, MOVE_WAKE_UP_SLAP, MOVE_LOW_KICK},
+    .status = STATUS1_BURN,
+	.hp = 62
     },
 };
 
 
-static const struct TrainerMonItemCustomMoves sParty_Laura[] = {
+static const struct TrainerMonItemStatusCustomMoves sParty_Laura[] = {
     {
     .iv = 0,
     .lvl = 21,
     .species = SPECIES_SAWK,
     .heldItem = ITEM_EXPERT_BELT,
 	.abilityNums = 0,
-    .moves = {MOVE_COUNTER, MOVE_BRICK_BREAK, MOVE_LOW_SWEEP, MOVE_ROCK_TOMB}
+    .moves = {MOVE_COUNTER, MOVE_BRICK_BREAK, MOVE_LOW_SWEEP, MOVE_ROCK_TOMB},
+	.status = 0,
+	.hp = 62
     },
     {
     .iv = 0,
     .lvl = 21,
     .species = SPECIES_THROH,
-    .heldItem = ITEM_FLAME_ORB,
+    .heldItem = ITEM_MUSCLE_BAND,
 	.abilityNums = 0,
-    .moves = {MOVE_PROTECT, MOVE_VITAL_THROW, MOVE_STORM_THROW, MOVE_KNOCK_OFF}
+    .moves = {MOVE_PROTECT, MOVE_VITAL_THROW, MOVE_STORM_THROW, MOVE_KNOCK_OFF},
+	.status = STATUS1_BURN,
+	.hp = 81
     },
 };
 
@@ -8165,22 +8188,26 @@ static const struct TrainerMonItemCustomMoves sParty_Lilith[] = {
     },
 };
 
-static const struct TrainerMonItemCustomMoves sParty_Cristian[] = {
+static const struct TrainerMonItemStatusCustomMoves sParty_Cristian[] = {
     {
     .iv = 0,
     .lvl = 20,
     .species = SPECIES_MACHOP,
-    .heldItem = ITEM_FLAME_ORB,
+    .heldItem = ITEM_ORAN_BERRY,
 	.abilityNums = 0,
-    .moves = {MOVE_PROTECT, MOVE_KNOCK_OFF, MOVE_LOW_SWEEP, MOVE_ROCK_TOMB}
+    .moves = {MOVE_PROTECT, MOVE_KNOCK_OFF, MOVE_LOW_SWEEP, MOVE_ROCK_TOMB},
+    .status = STATUS1_BURN,
+	.hp = 58
     },
     {
     .iv = 0,
     .lvl = 20,
     .species = SPECIES_MAKUHITA,
-    .heldItem = ITEM_FLAME_ORB,
+    .heldItem = ITEM_ORAN_BERRY,
 	.abilityNums = 1,
-    .moves = {MOVE_COUNTER, MOVE_BRICK_BREAK, MOVE_LOW_SWEEP, MOVE_ROCK_TOMB}
+    .moves = {MOVE_COUNTER, MOVE_BRICK_BREAK, MOVE_LOW_SWEEP, MOVE_ROCK_TOMB},
+	.status = STATUS1_BURN,
+	.hp = 65
     },
     {
     .iv = 0,
@@ -8188,9 +8215,12 @@ static const struct TrainerMonItemCustomMoves sParty_Cristian[] = {
     .species = SPECIES_CLOBBOPUS,
     .heldItem = ITEM_LUM_BERRY,
 	.abilityNums = 2,
-    .moves = {MOVE_BULK_UP, MOVE_LOW_SWEEP, MOVE_POWER_UP_PUNCH, MOVE_PAIN_SPLIT}
+    .moves = {MOVE_BULK_UP, MOVE_LOW_SWEEP, MOVE_POWER_UP_PUNCH, MOVE_PAIN_SPLIT},
+    .status = 0,
+	.hp = 56
     },
 };
+
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Sylvia[] = {
     {
@@ -8345,14 +8375,17 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Macey[] = {
 };
 
 
-static const struct TrainerMonItemCustomMoves sParty_BrendanRustboroTreecko[] = {
+
+static const struct TrainerMonItemStatusCustomMoves sParty_BrendanRustboroTreecko[] = {
     {
     .iv = 0,
     .lvl = 15,
     .species = SPECIES_TAILLOW,
-	.heldItem = ITEM_FLAME_ORB,
+	.heldItem = ITEM_MUSCLE_BAND,
 	.abilityNums = 0,
-    .moves = {MOVE_PROTECT, MOVE_WING_ATTACK, MOVE_QUICK_ATTACK, MOVE_ROOST}
+    .moves = {MOVE_PROTECT, MOVE_WING_ATTACK, MOVE_QUICK_ATTACK, MOVE_ROOST},
+	.status = STATUS1_BURN,
+	.hp = 37
     },
     {
     .iv = 0,
@@ -8360,7 +8393,9 @@ static const struct TrainerMonItemCustomMoves sParty_BrendanRustboroTreecko[] = 
     .species = SPECIES_LOMBRE,
 	.heldItem = ITEM_ORAN_BERRY,
 	.abilityNums = 0,
-    .moves = {MOVE_FAKE_OUT, MOVE_MEGA_DRAIN, MOVE_AURORA_BEAM, MOVE_WATER_PULSE}
+    .moves = {MOVE_FAKE_OUT, MOVE_MEGA_DRAIN, MOVE_AURORA_BEAM, MOVE_WATER_PULSE},
+    .status = 0,
+	.hp = 43
     },
     {
     .iv = 0,
@@ -8368,7 +8403,9 @@ static const struct TrainerMonItemCustomMoves sParty_BrendanRustboroTreecko[] = 
     .species = SPECIES_TORKOAL,
 	.heldItem = ITEM_ORAN_BERRY,
 	.abilityNums = 2,
-    .moves = {MOVE_RAPID_SPIN, MOVE_FIRE_SPIN, MOVE_FLAME_WHEEL, MOVE_ANCIENT_POWER}
+    .moves = {MOVE_RAPID_SPIN, MOVE_FIRE_SPIN, MOVE_FLAME_WHEEL, MOVE_ANCIENT_POWER},
+    .status = 0,
+	.hp = 46
     },
     {
     .iv = 0,
@@ -8376,18 +8413,22 @@ static const struct TrainerMonItemCustomMoves sParty_BrendanRustboroTreecko[] = 
     .species = SPECIES_DITTO,
 	.heldItem = ITEM_BERRY_JUICE,
 	.abilityNums = 0,
-    .moves = {MOVE_TRANSFORM, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    .moves = {MOVE_TRANSFORM, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+    .status = 0,
+	.hp = 41
     },
 };
 
-static const struct TrainerMonItemCustomMoves sParty_BrendanRustboroMudkip[] = {
+static const struct TrainerMonItemStatusCustomMoves sParty_BrendanRustboroMudkip[] = {
     {
     .iv = 0,
     .lvl = 15,
     .species = SPECIES_TAILLOW,
-	.heldItem = ITEM_FLAME_ORB,
+	.heldItem = ITEM_MUSCLE_BAND,
 	.abilityNums = 0,
-    .moves = {MOVE_PROTECT, MOVE_WING_ATTACK, MOVE_QUICK_ATTACK, MOVE_ROOST}
+    .moves = {MOVE_PROTECT, MOVE_WING_ATTACK, MOVE_QUICK_ATTACK, MOVE_ROOST},
+	.status = STATUS1_BURN,
+	.hp = 37
     },
     {
     .iv = 0,
@@ -8395,7 +8436,9 @@ static const struct TrainerMonItemCustomMoves sParty_BrendanRustboroMudkip[] = {
     .species = SPECIES_LOMBRE,
 	.heldItem = ITEM_ORAN_BERRY,
 	.abilityNums = 0,
-    .moves = {MOVE_FAKE_OUT, MOVE_MEGA_DRAIN, MOVE_AURORA_BEAM, MOVE_WATER_PULSE}
+    .moves = {MOVE_FAKE_OUT, MOVE_MEGA_DRAIN, MOVE_AURORA_BEAM, MOVE_WATER_PULSE},
+    .status = 0,
+	.hp = 43
     },
     {
     .iv = 0,
@@ -8403,7 +8446,9 @@ static const struct TrainerMonItemCustomMoves sParty_BrendanRustboroMudkip[] = {
     .species = SPECIES_TORKOAL,
 	.heldItem = ITEM_ORAN_BERRY,
 	.abilityNums = 2,
-    .moves = {MOVE_RAPID_SPIN, MOVE_FIRE_SPIN, MOVE_FLAME_WHEEL, MOVE_ANCIENT_POWER}
+    .moves = {MOVE_RAPID_SPIN, MOVE_FIRE_SPIN, MOVE_FLAME_WHEEL, MOVE_ANCIENT_POWER},
+    .status = 0,
+	.hp = 46
     },
     {
     .iv = 0,
@@ -8411,7 +8456,9 @@ static const struct TrainerMonItemCustomMoves sParty_BrendanRustboroMudkip[] = {
     .species = SPECIES_DITTO,
 	.heldItem = ITEM_BERRY_JUICE,
 	.abilityNums = 0,
-    .moves = {MOVE_TRANSFORM, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    .moves = {MOVE_TRANSFORM, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+    .status = 0,
+	.hp = 41
     },
 };
 
@@ -8485,14 +8532,16 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Jonathan[] = {
     }
 };
 
-static const struct TrainerMonItemCustomMoves sParty_BrendanRustboroTorchic[] = {
+static const struct TrainerMonItemStatusCustomMoves sParty_BrendanRustboroTorchic[] = {
     {
     .iv = 0,
     .lvl = 15,
     .species = SPECIES_TAILLOW,
-	.heldItem = ITEM_FLAME_ORB,
+	.heldItem = ITEM_MUSCLE_BAND,
 	.abilityNums = 0,
-    .moves = {MOVE_PROTECT, MOVE_WING_ATTACK, MOVE_QUICK_ATTACK, MOVE_ROOST}
+    .moves = {MOVE_PROTECT, MOVE_WING_ATTACK, MOVE_QUICK_ATTACK, MOVE_ROOST},
+	.status = STATUS1_BURN,
+	.hp = 37
     },
     {
     .iv = 0,
@@ -8500,7 +8549,9 @@ static const struct TrainerMonItemCustomMoves sParty_BrendanRustboroTorchic[] = 
     .species = SPECIES_LOMBRE,
 	.heldItem = ITEM_ORAN_BERRY,
 	.abilityNums = 0,
-    .moves = {MOVE_FAKE_OUT, MOVE_MEGA_DRAIN, MOVE_AURORA_BEAM, MOVE_WATER_PULSE}
+    .moves = {MOVE_FAKE_OUT, MOVE_MEGA_DRAIN, MOVE_AURORA_BEAM, MOVE_WATER_PULSE},
+    .status = 0,
+	.hp = 43
     },
     {
     .iv = 0,
@@ -8508,7 +8559,9 @@ static const struct TrainerMonItemCustomMoves sParty_BrendanRustboroTorchic[] = 
     .species = SPECIES_TORKOAL,
 	.heldItem = ITEM_ORAN_BERRY,
 	.abilityNums = 2,
-    .moves = {MOVE_RAPID_SPIN, MOVE_FIRE_SPIN, MOVE_FLAME_WHEEL, MOVE_ANCIENT_POWER}
+    .moves = {MOVE_RAPID_SPIN, MOVE_FIRE_SPIN, MOVE_FLAME_WHEEL, MOVE_ANCIENT_POWER},
+    .status = 0,
+	.hp = 46
     },
     {
     .iv = 0,
@@ -8516,18 +8569,22 @@ static const struct TrainerMonItemCustomMoves sParty_BrendanRustboroTorchic[] = 
     .species = SPECIES_DITTO,
 	.heldItem = ITEM_BERRY_JUICE,
 	.abilityNums = 0,
-    .moves = {MOVE_TRANSFORM, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    .moves = {MOVE_TRANSFORM, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+    .status = 0,
+	.hp = 41
     },
 };
 
-static const struct TrainerMonItemCustomMoves sParty_MayRustboroMudkip[] = {
+static const struct TrainerMonItemStatusCustomMoves sParty_MayRustboroMudkip[] = {
     {
     .iv = 0,
     .lvl = 15,
     .species = SPECIES_TAILLOW,
-	.heldItem = ITEM_FLAME_ORB,
+	.heldItem = ITEM_MUSCLE_BAND,
 	.abilityNums = 0,
-    .moves = {MOVE_PROTECT, MOVE_WING_ATTACK, MOVE_QUICK_ATTACK, MOVE_ROOST}
+    .moves = {MOVE_PROTECT, MOVE_WING_ATTACK, MOVE_QUICK_ATTACK, MOVE_ROOST},
+	.status = STATUS1_BURN,
+	.hp = 37
     },
     {
     .iv = 0,
@@ -8535,7 +8592,9 @@ static const struct TrainerMonItemCustomMoves sParty_MayRustboroMudkip[] = {
     .species = SPECIES_LOMBRE,
 	.heldItem = ITEM_ORAN_BERRY,
 	.abilityNums = 0,
-    .moves = {MOVE_FAKE_OUT, MOVE_MEGA_DRAIN, MOVE_AURORA_BEAM, MOVE_WATER_PULSE}
+    .moves = {MOVE_FAKE_OUT, MOVE_MEGA_DRAIN, MOVE_AURORA_BEAM, MOVE_WATER_PULSE},
+    .status = 0,
+	.hp = 43
     },
     {
     .iv = 0,
@@ -8543,7 +8602,9 @@ static const struct TrainerMonItemCustomMoves sParty_MayRustboroMudkip[] = {
     .species = SPECIES_TORKOAL,
 	.heldItem = ITEM_ORAN_BERRY,
 	.abilityNums = 2,
-    .moves = {MOVE_RAPID_SPIN, MOVE_FIRE_SPIN, MOVE_FLAME_WHEEL, MOVE_ANCIENT_POWER}
+    .moves = {MOVE_RAPID_SPIN, MOVE_FIRE_SPIN, MOVE_FLAME_WHEEL, MOVE_ANCIENT_POWER},
+    .status = 0,
+	.hp = 46
     },
     {
     .iv = 0,
@@ -8551,7 +8612,9 @@ static const struct TrainerMonItemCustomMoves sParty_MayRustboroMudkip[] = {
     .species = SPECIES_DITTO,
 	.heldItem = ITEM_BERRY_JUICE,
 	.abilityNums = 0,
-    .moves = {MOVE_TRANSFORM, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    .moves = {MOVE_TRANSFORM, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+    .status = 0,
+	.hp = 41
     },
 };
 
@@ -10997,14 +11060,16 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Cristin1[] = {
     }
 };
 
-static const struct TrainerMonItemCustomMoves sParty_MayRustboroTreecko[] = {
+static const struct TrainerMonItemStatusCustomMoves sParty_MayRustboroTreecko[] = {
     {
     .iv = 0,
     .lvl = 15,
     .species = SPECIES_TAILLOW,
-	.heldItem = ITEM_FLAME_ORB,
+	.heldItem = ITEM_MUSCLE_BAND,
 	.abilityNums = 0,
-    .moves = {MOVE_PROTECT, MOVE_WING_ATTACK, MOVE_QUICK_ATTACK, MOVE_ROOST}
+    .moves = {MOVE_PROTECT, MOVE_WING_ATTACK, MOVE_QUICK_ATTACK, MOVE_ROOST},
+	.status = STATUS1_BURN,
+	.hp = 37
     },
     {
     .iv = 0,
@@ -11012,7 +11077,9 @@ static const struct TrainerMonItemCustomMoves sParty_MayRustboroTreecko[] = {
     .species = SPECIES_LOMBRE,
 	.heldItem = ITEM_ORAN_BERRY,
 	.abilityNums = 0,
-    .moves = {MOVE_FAKE_OUT, MOVE_MEGA_DRAIN, MOVE_AURORA_BEAM, MOVE_WATER_PULSE}
+    .moves = {MOVE_FAKE_OUT, MOVE_MEGA_DRAIN, MOVE_AURORA_BEAM, MOVE_WATER_PULSE},
+    .status = 0,
+	.hp = 43
     },
     {
     .iv = 0,
@@ -11020,7 +11087,9 @@ static const struct TrainerMonItemCustomMoves sParty_MayRustboroTreecko[] = {
     .species = SPECIES_TORKOAL,
 	.heldItem = ITEM_ORAN_BERRY,
 	.abilityNums = 2,
-    .moves = {MOVE_RAPID_SPIN, MOVE_FIRE_SPIN, MOVE_FLAME_WHEEL, MOVE_ANCIENT_POWER}
+    .moves = {MOVE_RAPID_SPIN, MOVE_FIRE_SPIN, MOVE_FLAME_WHEEL, MOVE_ANCIENT_POWER},
+    .status = 0,
+	.hp = 46
     },
     {
     .iv = 0,
@@ -11028,18 +11097,22 @@ static const struct TrainerMonItemCustomMoves sParty_MayRustboroTreecko[] = {
     .species = SPECIES_DITTO,
 	.heldItem = ITEM_BERRY_JUICE,
 	.abilityNums = 0,
-    .moves = {MOVE_TRANSFORM, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    .moves = {MOVE_TRANSFORM, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+    .status = 0,
+	.hp = 41
     },
 };
 
-static const struct TrainerMonItemCustomMoves sParty_MayRustboroTorchic[] = {
+static const struct TrainerMonItemStatusCustomMoves sParty_MayRustboroTorchic[] = {
     {
     .iv = 0,
     .lvl = 15,
     .species = SPECIES_TAILLOW,
-	.heldItem = ITEM_FLAME_ORB,
+	.heldItem = ITEM_MUSCLE_BAND,
 	.abilityNums = 0,
-    .moves = {MOVE_PROTECT, MOVE_WING_ATTACK, MOVE_QUICK_ATTACK, MOVE_ROOST}
+    .moves = {MOVE_PROTECT, MOVE_WING_ATTACK, MOVE_QUICK_ATTACK, MOVE_ROOST},
+	.status = STATUS1_BURN,
+	.hp = 37
     },
     {
     .iv = 0,
@@ -11047,7 +11120,9 @@ static const struct TrainerMonItemCustomMoves sParty_MayRustboroTorchic[] = {
     .species = SPECIES_LOMBRE,
 	.heldItem = ITEM_ORAN_BERRY,
 	.abilityNums = 0,
-    .moves = {MOVE_FAKE_OUT, MOVE_MEGA_DRAIN, MOVE_AURORA_BEAM, MOVE_WATER_PULSE}
+    .moves = {MOVE_FAKE_OUT, MOVE_MEGA_DRAIN, MOVE_AURORA_BEAM, MOVE_WATER_PULSE},
+    .status = 0,
+	.hp = 43
     },
     {
     .iv = 0,
@@ -11055,7 +11130,9 @@ static const struct TrainerMonItemCustomMoves sParty_MayRustboroTorchic[] = {
     .species = SPECIES_TORKOAL,
 	.heldItem = ITEM_ORAN_BERRY,
 	.abilityNums = 2,
-    .moves = {MOVE_RAPID_SPIN, MOVE_FIRE_SPIN, MOVE_FLAME_WHEEL, MOVE_ANCIENT_POWER}
+    .moves = {MOVE_RAPID_SPIN, MOVE_FIRE_SPIN, MOVE_FLAME_WHEEL, MOVE_ANCIENT_POWER},
+    .status = 0,
+	.hp = 46
     },
     {
     .iv = 0,
@@ -11063,7 +11140,9 @@ static const struct TrainerMonItemCustomMoves sParty_MayRustboroTorchic[] = {
     .species = SPECIES_DITTO,
 	.heldItem = ITEM_BERRY_JUICE,
 	.abilityNums = 0,
-    .moves = {MOVE_TRANSFORM, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    .moves = {MOVE_TRANSFORM, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+    .status = 0,
+	.hp = 41
     },
 };
 
@@ -12123,32 +12202,37 @@ static const struct TrainerMonItemCustomMoves sParty_Winona5[] = {
     }
 };
 
-static const struct TrainerMonItemCustomMoves sParty_Pauly[] = {
+static const struct TrainerMonItemStatusCustomMoves sParty_Pauly[] = {
     {
     .iv = 0,
     .lvl = 10,
     .species = SPECIES_PINSIR,
     .heldItem = ITEM_BRIGHT_POWDER,
 	.abilityNums = 0,
-    .moves = {MOVE_VISE_GRIP, MOVE_BUG_BITE, MOVE_BULK_UP, MOVE_SEISMIC_TOSS}
+    .moves = {MOVE_VISE_GRIP, MOVE_BUG_BITE, MOVE_BULK_UP, MOVE_SEISMIC_TOSS},
+    .status = 0,
+	.hp = 33
     },
     {
     .iv = 0,
     .lvl = 10,
     .species = SPECIES_ACCELGOR,
-    .heldItem = ITEM_NONE,
+    .heldItem = ITEM_BRIGHT_POWDER,
 	.abilityNums = 0,
-    .moves = {MOVE_WATER_SHURIKEN, MOVE_QUICK_ATTACK, MOVE_ABSORB, MOVE_SPIKES}
+    .moves = {MOVE_WATER_SHURIKEN, MOVE_QUICK_ATTACK, MOVE_ABSORB, MOVE_SPIKES},
+    .status = 0,
+	.hp = 36
     },
     {
     .iv = 0,
     .lvl = 10,
     .species = SPECIES_HERACROSS,
-    .heldItem = ITEM_FLAME_ORB,
+    .heldItem = ITEM_MUSCLE_BAND,
 	.abilityNums = 1,
-    .moves = {MOVE_BULLET_SEED, MOVE_ARM_THRUST, MOVE_AERIAL_ACE, MOVE_PROTECT}
+    .moves = {MOVE_BULLET_SEED, MOVE_ARM_THRUST, MOVE_AERIAL_ACE, MOVE_PROTECT},
+	.status = STATUS1_BURN,
+	.hp = 36
     },
-
 
 };
 
