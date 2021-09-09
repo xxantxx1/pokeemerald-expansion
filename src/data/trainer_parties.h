@@ -4459,14 +4459,16 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Shelby5[] = {
     }
 };
 
-static const struct TrainerMonItemCustomMoves sParty_Calvin1[] = {
+static const struct TrainerMonItemStatusCustomMoves sParty_Calvin1[] = {
     {
     .iv = 0,
     .lvl = 4,
     .species = SPECIES_BIDOOF,
 	.heldItem = ITEM_ORAN_BERRY,
 	.abilityNums = 0,
-    .moves = {MOVE_QUICK_ATTACK, MOVE_DEFENSE_CURL, MOVE_AMNESIA, MOVE_NONE}
+    .moves = {MOVE_QUICK_ATTACK, MOVE_DEFENSE_CURL, MOVE_AMNESIA, MOVE_NONE},
+	.status = STATUS1_POISON,
+	.hp = 5
     },
 	{
     .iv = 0,
@@ -4474,7 +4476,9 @@ static const struct TrainerMonItemCustomMoves sParty_Calvin1[] = {
     .species = SPECIES_STARLY,
 	.heldItem = ITEM_ORAN_BERRY,
 	.abilityNums = 0,
-    .moves = {MOVE_PECK, MOVE_QUICK_ATTACK, MOVE_GROWL, MOVE_NONE}
+    .moves = {MOVE_PECK, MOVE_QUICK_ATTACK, MOVE_GROWL, MOVE_NONE},
+	.status = 0,
+	.hp = 20
 	}
 };
 

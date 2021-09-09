@@ -1,0 +1,46 @@
+d[36m:[msrc/battle_ai_switch_items.c[36m:[m            if ([1;31mitemEffect[ms[3] & ITEM3_PARALYSIS && gBattleMons[gActiveBattler].status1 & [1;31mSTATUS1_PARALYSIS[m)
+d[36m:[msrc/pokemon.c[36m:[m            if (([1;31mitemEffect[m[i] & ITEM3_PARALYSIS) && HealStatusConditions(mon, partyIndex, [1;31mSTATUS1_PARALYSIS[m, battlerId) == 0)
+data/battle_scripts_1.s[36m:[m	jumpifstatus BS_TARGET, [1;31mSTATUS1_PARALYSIS[m, BattleScript_AlreadyParalyzed
+include/constants/battle.h[36m:[m#define [1;31mSTATUS1_PARALYSIS[m        (1 << 6)
+include/constants/battle.h[36m:[m#define STATUS1_ANY              (STATUS1_SLEEP | STATUS1_POISON | STATUS1_BURN | STATUS1_FREEZE | [1;31mSTATUS1_PARALYSIS[m | STATUS1_TOXIC_POISON)
+src/battle_ai_main.c[36m:[m            if (!(gBattleMons[battlerDef].status1 & (STATUS1_PSN_ANY | STATUS1_BURN | [1;31mSTATUS1_PARALYSIS[m)))
+src/battle_ai_main.c[36m:[m            else if (gBattleMons[battlerAtk].status1 & [1;31mSTATUS1_PARALYSIS[m && !AI_CanParalyze(battlerAtk, battlerDef, AI_DATA->defAbility, move, AI_DATA->partnerMove))
+src/battle_ai_main.c[36m:[m        else if (gBattleMons[battlerAtk].status1 & [1;31mSTATUS1_PARALYSIS[m)
+src/battle_ai_main.c[36m:[m        if (gBattleMons[battlerAtk].status1 & (STATUS1_POISON | STATUS1_BURN | [1;31mSTATUS1_PARALYSIS[m | STATUS1_TOXIC_POISON))
+src/battle_ai_main.c[36m:[m        if (gBattleMons[battlerDef].status1 & [1;31mSTATUS1_PARALYSIS[m)
+src/battle_ai_switch_items.c[36m:[m            if (itemEffects[3] & ITEM3_PARALYSIS && gBattleMons[gActiveBattler].status1 & [1;31mSTATUS1_PARALYSIS[m)
+src/battle_ai_util.c[36m:[m      || gBattleMons[battlerDef].status1 & [1;31mSTATUS1_PARALYSIS[m
+src/battle_ai_util.c[36m:[m        if (gBattleMons[battlerDef].status1 & [1;31mSTATUS1_PARALYSIS[m
+src/battle_gfx_sfx_util.c[36m:[m        else if (status == [1;31mSTATUS1_PARALYSIS[m)
+src/battle_interface.c[36m:[m    else if (status & [1;31mSTATUS1_PARALYSIS[m)
+src/battle_main.c[36m:[m    if (gBattleMons[battlerId].status1 & [1;31mSTATUS1_PARALYSIS[m && ability != ABILITY_QUICK_FEET)
+src/battle_pike.c[36m:[m    case [1;31mSTATUS1_PARALYSIS[m:
+src/battle_pike.c[36m:[m    case [1;31mSTATUS1_PARALYSIS[m:
+src/battle_pike.c[36m:[m    case [1;31mSTATUS1_PARALYSIS[m:
+src/battle_pike.c[36m:[m            sStatusFlags = [1;31mSTATUS1_PARALYSIS[m;
+src/battle_pike.c[36m:[m    case [1;31mSTATUS1_PARALYSIS[m:
+src/battle_script_commands.c[36m:[m    [MOVE_EFFECT_PARALYSIS]      = [1;31mSTATUS1_PARALYSIS[m,
+src/battle_script_commands.c[36m:[m        case [1;31mSTATUS1_PARALYSIS[m:
+src/battle_script_commands.c[36m:[m        case [1;31mSTATUS1_PARALYSIS[m:
+src/battle_script_commands.c[36m:[m        if (gBattleMons[gBattlerAttacker].status1 & [1;31mSTATUS1_PARALYSIS[m)
+src/battle_script_commands.c[36m:[m    if (gBattleMons[gBattlerAttacker].status1 & (STATUS1_POISON | STATUS1_BURN | [1;31mSTATUS1_PARALYSIS[m | STATUS1_TOXIC_POISON))
+src/battle_script_commands.c[36m:[m        if (gBattleMons[gBattlerTarget].status1 & (STATUS1_POISON | STATUS1_BURN | [1;31mSTATUS1_PARALYSIS[m | STATUS1_TOXIC_POISON))
+src/battle_util.c[36m:[m            if ((gBattleMons[gBattlerAttacker].status1 & [1;31mSTATUS1_PARALYSIS[m) && (Random() % 4) == 0)
+src/battle_util.c[36m:[m                    if (gBattleMons[battler].status1 & [1;31mSTATUS1_PARALYSIS[m)
+src/battle_util.c[36m:[m                if (gBattleMons[battler].status1 & [1;31mSTATUS1_PARALYSIS[m)
+src/battle_util.c[36m:[m                if (B_BERRIES_INSTANT >= GEN_4 && gBattleMons[battlerId].status1 & [1;31mSTATUS1_PARALYSIS[m && !UnnerveOn(battlerId, gLastUsedItem))
+src/battle_util.c[36m:[m                    gBattleMons[battlerId].status1 &= ~([1;31mSTATUS1_PARALYSIS[m);
+src/battle_util.c[36m:[m                    if (gBattleMons[battlerId].status1 & [1;31mSTATUS1_PARALYSIS[m)
+src/battle_util.c[36m:[m                if (gBattleMons[battlerId].status1 & [1;31mSTATUS1_PARALYSIS[m && !UnnerveOn(battlerId, gLastUsedItem))
+src/battle_util.c[36m:[m                    gBattleMons[battlerId].status1 &= ~([1;31mSTATUS1_PARALYSIS[m);
+src/battle_util.c[36m:[m                    if (gBattleMons[battlerId].status1 & [1;31mSTATUS1_PARALYSIS[m)
+src/battle_util.c[36m:[m                if (gBattleMons[battlerId].status1 & [1;31mSTATUS1_PARALYSIS[m && !UnnerveOn(battlerId, gLastUsedItem))
+src/battle_util.c[36m:[m                    gBattleMons[battlerId].status1 &= ~([1;31mSTATUS1_PARALYSIS[m);
+src/battle_util.c[36m:[m                    if (gBattleMons[battlerId].status1 & [1;31mSTATUS1_PARALYSIS[m)
+src/battle_util.c[36m:[m        if (gBattleMons[battlerDef].status1 & [1;31mSTATUS1_PARALYSIS[m)
+src/battle_util.c[36m:[m        if (gBattleMons[battlerAtk].status1 & (STATUS1_BURN | STATUS1_PSN_ANY | [1;31mSTATUS1_PARALYSIS[m))
+src/data/battle_moves.h[36m:[m        .argument = [1;31mSTATUS1_PARALYSIS[m,
+src/data/battle_moves.h[36m:[m            .argument = [1;31mSTATUS1_PARALYSIS[m,
+src/data/battle_moves.h[36m:[m        .argument = [1;31mSTATUS1_PARALYSIS[m,
+src/party_menu.c[36m:[m    if (status & [1;31mSTATUS1_PARALYSIS[m)
+src/pokemon.c[36m:[m            if ((itemEffect[i] & ITEM3_PARALYSIS) && HealStatusConditions(mon, partyIndex, [1;31mSTATUS1_PARALYSIS[m, battlerId) == 0)

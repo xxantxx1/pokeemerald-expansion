@@ -53,12 +53,26 @@ struct TrainerMonItemCustomMoves
 	
 };
 
+struct TrainerMonItemStatusCustomMoves
+{
+    u16 iv;
+    u8 lvl;
+    u16 species;
+    u16 heldItem;
+	u8 abilityNums;
+    u16 moves[MAX_MON_MOVES];
+	u32 status;
+	u16 hp;
+	
+};
+
 union TrainerMonPtr
 {
     const struct TrainerMonNoItemDefaultMoves *NoItemDefaultMoves;
     const struct TrainerMonNoItemCustomMoves *NoItemCustomMoves;
     const struct TrainerMonItemDefaultMoves *ItemDefaultMoves;
     const struct TrainerMonItemCustomMoves *ItemCustomMoves;
+	const struct TrainerMonItemStatusCustomMoves *ItemStatusMoves;
 };
 
 struct Trainer
