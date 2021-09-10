@@ -255,25 +255,68 @@ static const struct TrainerMonNoItemDefaultMoves sParty_GruntWeatherInst3[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntMuseum1[] = {
+static const struct TrainerMonItemCustomMoves sParty_GruntMuseum1[] = {
     {
     .iv = 0,
-    .lvl = 15,
-    .species = SPECIES_CARVANHA,
-    }
-};
-
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntMuseum2[] = {
-    {
-    .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_ZUBAT,
+    .lvl = 23,
+    .species = SPECIES_ARAQUANID,
+    .heldItem = ITEM_MYSTIC_WATER,
+	.abilityNums = 0,
+    .moves = {MOVE_BUG_BITE, MOVE_HEADBUTT, MOVE_WATERFALL, MOVE_INFESTATION}
     },
     {
     .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_CARVANHA,
+    .lvl = 23,
+    .species = SPECIES_FRILLISH,
+    .heldItem = ITEM_SCOPE_LENS,
+	.abilityNums = 1,
+    .moves = {MOVE_BRINE, MOVE_RECOVER, MOVE_NIGHT_SHADE, MOVE_HEX}
+    },
+    {
+    .iv = 0,
+    .lvl = 23,
+    .species = SPECIES_GYARADOS,
+    .heldItem = ITEM_WACAN_BERRY,
+	.abilityNums = 1,
+    .moves = {MOVE_BITE, MOVE_ICE_FANG, MOVE_BULLDOZE, MOVE_SCALE_SHOT}
     }
+};
+
+
+
+static const struct TrainerMonItemCustomMoves sParty_GruntMuseum2[] = {
+    {
+    .iv = 0,
+    .lvl = 24,
+    .species = SPECIES_MAREANIE,
+    .heldItem = ITEM_BLACK_SLUDGE,
+	.abilityNums = 0,
+    .moves = {MOVE_PROTECT, MOVE_TOXIC_SPIKES, MOVE_VENOSHOCK, MOVE_WATER_PULSE}
+    },
+    {
+    .iv = 0,
+    .lvl = 24,
+    .species = SPECIES_PALPITOAD,
+    .heldItem = ITEM_RED_CARD,
+	.abilityNums = 0,
+    .moves = {MOVE_BUBBLE_BEAM, MOVE_BULLDOZE, MOVE_ACID, MOVE_STEALTH_ROCK}
+    },
+    {
+    .iv = 0,
+    .lvl = 24,
+    .species = SPECIES_WISHIWASHI,
+    .heldItem = ITEM_LEFTOVERS,
+	.abilityNums = 0,
+    .moves = {MOVE_DIVE, MOVE_AQUA_RING, MOVE_BRINE, MOVE_FEINT_ATTACK}
+    },
+    {
+    .iv = 0,
+    .lvl = 24,
+    .species = SPECIES_MANTINE,
+    .heldItem = ITEM_WACAN_BERRY,
+	.abilityNums = 0,
+    .moves = {MOVE_WATER_PULSE, MOVE_WING_ATTACK, MOVE_SUPERSONIC, MOVE_BULLET_SEED}
+    },
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_GruntSpaceCenter1[] = {
@@ -4275,19 +4318,32 @@ static const struct TrainerMonItemDefaultMoves sParty_Bethany[] = {
     }
 };
 
-static const struct TrainerMonItemDefaultMoves sParty_Isabel1[] = {
+
+static const struct TrainerMonItemCustomMoves sParty_Isabel1[] = {
     {
     .iv = 0,
-    .lvl = 14,
+    .lvl = 25,
     .species = SPECIES_PLUSLE,
-    .heldItem = ITEM_ORAN_BERRY
+    .heldItem = ITEM_WISE_GLASSES,
+	.abilityNums = 0,
+    .moves = {MOVE_NUZZLE, MOVE_CHARM, MOVE_DISCHARGE, MOVE_HELPING_HAND}
     },
     {
     .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_MINUN,
-    .heldItem = ITEM_ORAN_BERRY
-    }
+    .lvl = 25,
+    .species = SPECIES_DEDENNE,
+    .heldItem = ITEM_MAGNET,
+	.abilityNums = 2,
+    .moves = {MOVE_PARABOLIC_CHARGE, MOVE_CHARM, MOVE_DRAINING_KISS, MOVE_ELECTRIC_TERRAIN}
+    },
+    {
+    .iv = 0,
+    .lvl = 25,
+    .species = SPECIES_FLAFFY,
+    .heldItem = ITEM_MYSTIC_WATER,
+	.abilityNums = 2,
+    .moves = {MOVE_POWER_GEM, MOVE_DISCHARGE, MOVE_VOLT_SWITCH, MOVE_EERIE_IMPULSE}
+    },
 };
 
 static const struct TrainerMonItemDefaultMoves sParty_Isabel2[] = {
@@ -10255,19 +10311,23 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Chandler[] = {
     }
 };
 
-static const struct TrainerMonItemDefaultMoves sParty_Kaleb[] = {
+static const struct TrainerMonItemCustomMoves sParty_Kaleb[] = {
     {
     .iv = 0,
-    .lvl = 14,
+    .lvl = 25,
     .species = SPECIES_MINUN,
-    .heldItem = ITEM_ORAN_BERRY
+	.heldItem = ITEM_MAGNET,
+	.abilityNums = 0,
+    .moves = {MOVE_ENCORE, MOVE_SWIFT, MOVE_DISCHARGE, MOVE_GRASS_KNOT}
     },
     {
     .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_PLUSLE,
-    .heldItem = ITEM_ORAN_BERRY
-    }
+    .lvl = 26,
+    .species = SPECIES_MANECTRIC,
+	.heldItem = ITEM_MAGNET,
+	.abilityNums = 2,
+    .moves = {MOVE_SHOCK_WAVE, MOVE_ICE_FANG, MOVE_BITE, MOVE_CHARGE_BEAM}
+    },
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Joseph[] = {
