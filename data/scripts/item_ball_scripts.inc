@@ -7,11 +7,11 @@ Route102_EventScript_Itemjuice::
 	end
 
 Route103_EventScript_ItemGuardSpec:: @ 8290CE5
-	finditem ITEM_GUARD_SPEC
+	finditem ITEM_SITRUS_BERRY
 	end
 
 Route103_EventScript_ItemPPUp:: @ 8290CF2
-	finditem ITEM_PP_UP
+	finditem ITEM_SITRUS_BERRY
 	end
 
 Route104_EventScript_ItemPPUp:: @ 8290CFF
